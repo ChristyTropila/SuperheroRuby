@@ -7,17 +7,12 @@ class Organization < ActiveRecord::Base
 
 
 
-
     #get all organizations namee
-    def self.get_organization_names
-        orgs=Organization.all.map do |org|
-            org.name
+    def self.all_names
+        Organization.all.map do |org|
+            {"#{org.name} - #{org.description}" => org.id}
         end
     end
 
 
-    def self.get_superpower_through_superhero(name)
-        hero=Superhero.new(name)
-        hero
-     end
 end

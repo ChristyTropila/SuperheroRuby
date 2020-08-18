@@ -47,6 +47,7 @@ class Interface
           menu.choice "View Your Superheros", -> {display_user_superheros}
           menu.choice "Create A Superhero", -> {display_and_add_a_superhero}
           menu.choice "Give Your Superhero A Superpower", ->{display_and_add_superpower}
+          menu.choice "Add Your Superhero To An Organization", ->{display_and_add_orgs}
           menu.choice "Edit Your Superheros", -> {}
           menu.choice "Remove Your Superheros", -> {}
           menu.choice "Exit And Log Out", -> {}
@@ -72,16 +73,20 @@ class Interface
 
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
-    newSup=Superhero.new
-    super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
-    chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
-          
-    Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
-
+       super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
+       chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
+       Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
     #  binding.pry
-        self.main_menu()
+       self.main_menu()
     end
-    
+
+    def display_and_add_orgs
+      super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
+      choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
+       Superhero.update(super_to_add_power, organization_id:  choesen_org) 
+
+      self.main_menu()
+    end
 
 
 

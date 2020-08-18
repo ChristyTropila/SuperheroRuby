@@ -14,7 +14,6 @@ class Superhero < ActiveRecord::Base
 
     #CRUD METHODS
 
-
     #return a hash of all heros with name id key value pairs
     def self.all_names
         Superhero.all.map do |hero|
@@ -25,10 +24,10 @@ class Superhero < ActiveRecord::Base
 
 
       #this method interpolates the name of supehero and its associated superpowers
-      def self.all_names_and_descrip
-        Superhero.all.map do |hero|
-            {hero.name => "#{hero.superpower.name} #{hero.superpower.description}"}
-        end
+    def self.all_names_and_descrip
+         Superhero.all.map do |hero|
+         " NAME: #{hero.name}\n SUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
+      end
     end
 
 
@@ -50,7 +49,7 @@ class Superhero < ActiveRecord::Base
 
 
 
-    
+
 
     def self.all_superpowers
       superVar=Superpower.all.map do |hero|
