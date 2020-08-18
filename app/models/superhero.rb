@@ -24,6 +24,34 @@ class Superhero < ActiveRecord::Base
     end
 
 
+      #this method interpolates the name of supehero and its associated superpowers
+      def self.all_names_and_descrip
+        Superhero.all.map do |hero|
+            {hero.name => "#{hero.superpower.name} #{hero.superpower.description}"}
+        end
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     def self.all_superpowers
       superVar=Superpower.all.map do |hero|
            if hero.superheros==self

@@ -57,9 +57,7 @@ class Interface
      #helper method to get a list of superheros associated with current user
      def display_user_superheros
       puts "*************************"
-      puts self.user.superheros.all_names
-      puts self.user.superheros
-      binding.pry
+      puts self.user.superheros.all_names_and_descrip
       puts "*************************"
       sleep 5
       self.main_menu()
@@ -75,17 +73,14 @@ class Interface
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
     newSup=Superhero.new
-     super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
-     chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
-
-    #  new_var=  self.user.superheros.map do |superarray|
-    #       superarray.superpower_id= chosen_superpower
+    super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
+    chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
           
-       Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
-    
+    Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
+
     #  binding.pry
         self.main_menu()
-     end
+    end
     
 
 
