@@ -19,6 +19,8 @@ class Superpower < ActiveRecord::Base
     end
 
 
+
+
     def find_by_id(id)
         Superpower.all.select do |power|
          if power.id==id

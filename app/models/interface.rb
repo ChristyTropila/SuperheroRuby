@@ -3,7 +3,7 @@ require 'pry'
 class Interface
 
     attr_reader :prompt
-    attr_accessor :user, :superpower
+    attr_accessor :user, :superpower, :superhero
 
 
     def initialize
@@ -58,32 +58,32 @@ class Interface
      def display_user_superheros
       puts "*************************"
       puts self.user.superheros.all_names
-      puts self.user.superheros.all_superpowers
-    #  binding.pry
+      puts self.user.superheros
+      binding.pry
       puts "*************************"
       sleep 5
-          # self.user.superheros
-          # self.user.user_superheros
-          self.main_menu()
+      self.main_menu()
      end
 
      #This helper method will add a superhero to a users collection
      def display_and_add_a_superhero
         choosen_superhero_id=prompt.select("Choose A Superhero Please", Superhero.all_names)
         userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero_id)
-       
         self.main_menu()
      end
 
    #This helper method will list all superpowers and assign to a superhero
-     def display_and_add_superpower
+    def display_and_add_superpower
+    newSup=Superhero.new
      super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
      chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
-    #  find_superhero_by_id=self.user.superheros.all.map do |hero|
-    #                           hero.superpower_id =chosen_superpower
-    #  end
-    supName=Superpower.find_by_id(chosen_superpower)
-      binding.pry
+
+    #  new_var=  self.user.superheros.map do |superarray|
+    #       superarray.superpower_id= chosen_superpower
+          
+       Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
+    
+    #  binding.pry
         self.main_menu()
      end
     

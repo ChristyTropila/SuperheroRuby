@@ -1,9 +1,9 @@
 Superhero.destroy_all
 Superpower.destroy_all
 Organization.destroy_all
-# Superhero.reset_pk_sequence
-# Superpower.reset_pk_sequence
-# Organization.reset_pk_sequence
+Superhero.reset_sequence_name
+Superpower.reset_sequence_name
+Organization.reset_sequence_name
 
 #organization seeded data
 good_guys=Organization.create(name: "The Good Guys", description: "Good guys only")

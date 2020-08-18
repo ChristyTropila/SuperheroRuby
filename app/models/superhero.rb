@@ -25,12 +25,27 @@ class Superhero < ActiveRecord::Base
 
 
     def self.all_superpowers
-        Superhero.all.map do |hero|
-            {hero.superpower => hero.id}
-
-            #binding.pry
+      superVar=Superpower.all.map do |hero|
+           if hero.superheros==self
+               hero.name
+          #  binding.pry
         end
     end
+                 #binding.pry
+        end
+
+     
+    def self.display_name_and_descrip
+        Superpower.all.map do |power|
+          #  binding.pry
+             if power.superheros==self
+            puts "#{power.name} => #{power.description}"
+            end
+        end
+        end
+
+    
+    
 
     def find_by_id(id)
        Superhero.all.select do |hero|
