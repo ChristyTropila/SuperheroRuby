@@ -3,7 +3,7 @@ require 'pry'
 class Interface
 
     attr_reader :prompt
-    attr_accessor :user, :superpower, :superhero
+    attr_accessor :user, :superpower, :superhero, :heroman, :banner
 
 
     def initialize
@@ -12,6 +12,8 @@ class Interface
 
      #This menu will first be displayed when a user runs rake :start
      def welcome
+          Banner.go
+         
           user_inpupt=prompt.select("Welcome to the Game of Superheros.") do |menu|
             menu.choice "Register an Account", -> {register_user_helper}
             menu.choice "Log Into Existing Account", -> {user_login_helper}
@@ -38,9 +40,15 @@ class Interface
 
      #After a user is registered, this is the main menu that user will see
      def main_menu
+      
          user.reload
          system "clear"
-         puts "Welcome, #{self.user.name}"
+         puts"**************************************************************************************************************************"
+         puts"**************************************************************************************************************************"
+         puts"**************************************************************************************************************************"
+         puts"                                                                                                                          "
+         puts "WELCOME, #{self.user.name}!!"
+         puts "                            "
          prompt.select("What would you like to do?") do |menu|
           menu.choice "View Your Superheros", -> {display_user_superheros}
           menu.choice "Create A Superhero", -> {display_and_add_a_superhero}
@@ -50,14 +58,15 @@ class Interface
           menu.choice "Remove Your Superheros", -> {}
           menu.choice "Exit And Log Out", -> {}
          end
+         
+         
      end
 
 
      #helper method to get a list of superheros associated with current user
      def display_user_superheros
-      puts "*************************"
+      HeroMan.go
       puts self.user.superheros.all_names_and_descrip.uniq
-      puts "*************************"
       sleep 5
       self.main_menu()
      end
