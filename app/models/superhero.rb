@@ -16,70 +16,81 @@ class Superhero < ActiveRecord::Base
 
     #return a hash of all heros with name id key value pairs
     def self.all_names
-        Superhero.all.map do |hero|
+        result=Superhero.all.map do |hero|
             {hero.name => hero.id}
            # binding.pry
         end
+        result
     end
 
 
-      #this method interpolates the name of supehero and its associated superpowers
+      #this method interpolates the name of supehero and its associated superpowers and organizations.
+      #accounts for possiblity of superheros having yet to be assigned a superpower or organization
     def self.all_names_and_descrip
          Superhero.all.map do |hero|
-         " NAME: #{hero.name}\n SUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
-      end
-    end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    def self.all_superpowers
-      superVar=Superpower.all.map do |hero|
-           if hero.superheros==self
-               hero.name
-          #  binding.pry
-        end
-    end
-                 #binding.pry
-        end
-
-     
-    def self.display_name_and_descrip
-        Superpower.all.map do |power|
-          #  binding.pry
-             if power.superheros==self
-            puts "#{power.name} => #{power.description}"
+            if !hero.superpower && !hero.organization
+                " NAME: #{hero.name}"
+            elsif !hero.superpower
+                " NAME: #{hero.name}\nORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
+            elsif !hero.organization
+                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n"
+            else 
+                " NAME: #{hero.name}\n SUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
+          
             end
         end
-        end
-
-    
-    
-
-    def find_by_id(id)
-       Superhero.all.select do |hero|
-        if hero.id=id
-         hero
-        end
     end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # def self.all_superpowers
+    #   superVar=Superpower.all.map do |hero|
+    #        if hero.superheros==self
+    #            hero.name
+    #       #  binding.pry
+    #     end
+    # end
+    #              #binding.pry
+    #     end
+
+     
+    # def self.display_name_and_descrip
+    #     Superpower.all.map do |power|
+    #       #  binding.pry
+    #          if power.superheros==self
+    #         puts "#{power.name} => #{power.description}"
+    #         end
+    #     end
+    #     end
+
+    
+    
+
+    # def find_by_id(id)
+    #    Superhero.all.select do |hero|
+    #     if hero.id=id
+    #      hero
+    #     end
+    # end
         
     end
 
