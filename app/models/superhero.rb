@@ -24,11 +24,15 @@ class Superhero < ActiveRecord::Base
     end
 
 
+
+
+    
       #this method interpolates the name of supehero and its associated superpowers and organizations.
       #accounts for possiblity of superheros having yet to be assigned a superpower or organization
     def self.all_names_and_descrip
    
-     results=Superhero.all.map do |hero|
+     results=Superhero.all.reload.map do |hero|
+        !user.superheroes.include?(superhero)
             if !hero.superpower && !hero.organization
                 "NAME: #{hero.name}
                          \n "
@@ -44,10 +48,31 @@ class Superhero < ActiveRecord::Base
             end
     
     end
+    
+end
+
+  
+    #this method should list out available superheros that have not already been chosen by them in the tty prompt menu.
+    #they can select "choose a superhero" on the menu and should not have any superheros that they have already chosen still on that list
+    #1)Get a list of all superheros
+    #2)Check to see if any superheros has a user_id that is equal to the current users id
+    #3)If no match, list that superhero
+    #4)If current user id matches the user_id of any superheros, do not display that superhero in the menu choices.
+
+    # def self.names_not_chosen(id)
+    #    result= Superhero.all.map do |hero|
+    #    # binding.pry
+    #         if hero.user_id ==id
+    #         else 
+    #             {hero.name => hero.id}
+    #         end
+    #     end
+    #     result
+    # end
+      
   
     
         
-end
 
 
 
@@ -72,7 +97,7 @@ end
 
     # def self.all_superpowers
     #   superVar=Superpower.all.map do |hero|
-    #        if hero.superheros==self
+    #   3     if hero.superheros==self
     #            hero.name
     #       #  binding.pry
     #     end

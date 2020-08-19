@@ -26,30 +26,4 @@ def self.login
 
 
 
-
-
-    # #this method will add a superhero object into a user array
-    # def add_superhero_to_users_list(superhero)
-    #     self.superheros << superhero
-    #     superhero.users << self
-    # end
-
-    # def delete_superhero_from_self(superhero)
-    #     self.find(superhero.superhero_id).delete_all
-    # end
-
- 
-
-    # def self.get_all_superheros
-        
-    # #    heros_list= UserSuperhero.all.map do |heros|
-    # #         heros.superhero_id
-    # #       #  binding.pry
-    # #         # binding.pry
-    # #         end
-    #     self.superheros.map do |hero|
-    #    binding.pry
-    #     end
-    # end
-
 end
