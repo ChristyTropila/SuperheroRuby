@@ -14,15 +14,24 @@ def self.register
    end
 end
 
+
+   #login a user
 def self.login
     userInfo=TTY::Prompt.new.ask("What is your name?")
+    logedIn=User.find_by(name: userInfo)
  
-    if User.find_by(name: userInfo)
-       puts "Sorry, it looks like that username is taken."
-     else
-      User.create(name: userInfo)
-    end
- end
+    if !logedIn
+       puts "Sorry, it looks like that username doesn't exist!"
+     end
+     logedIn
+end
+
+
+
+
+
+
+
 
 
 

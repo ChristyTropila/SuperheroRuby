@@ -12,8 +12,7 @@ class Interface
 
      #This menu will first be displayed when a user runs rake :start
      def welcome
-          Banner.go
-         
+         # Banner.go
           user_inpupt=prompt.select("Welcome to the Game of Superheros.") do |menu|
             menu.choice "Register an Account", -> {register_user_helper}
             menu.choice "Log Into Existing Account", -> {user_login_helper}
@@ -33,9 +32,20 @@ class Interface
      end
 
      #Login 
-     def user_login_helpepr
+     def user_login_helper
         userReturnValue=User.login()
+          until userReturnValue
+                userReturnValue=User.login()
+          end
+          self.user=userReturnValue
+          self.main_menu
      end
+
+     #
+    def user_log_out
+       system 'clear'
+       welcome()
+    end
       
 
      #After a user is registered, this is the main menu that user will see
@@ -43,9 +53,9 @@ class Interface
       
          user.reload
          system "clear"
-         puts"**************************************************************************************************************************"
-         puts"**************************************************************************************************************************"
-         puts"**************************************************************************************************************************"
+         puts"****************************************************************************************************************************************"
+         puts"****************************************************************************************************************************************"
+         puts"****************************************************************************************************************************************"
          puts"                                                                                                                          "
          puts "WELCOME, #{self.user.name}!!"
          puts "                            "
@@ -54,9 +64,8 @@ class Interface
           menu.choice "Create A Superhero", -> {display_and_add_a_superhero}
           menu.choice "Give Your Superhero A Superpower/Edit", ->{display_and_add_superpower}
           menu.choice "Add Your Superhero To An Organization/Edit", ->{display_and_add_orgs}
-          # menu.choice "Edit Your Superheros", -> {}
-          menu.choice "Remove Your Superheros", -> {}
-          menu.choice "Exit And Log Out", -> {}
+          menu.choice "Delete A Superheros From Your List", -> {remove_superhero_from_usr}
+          menu.choice "Exit And Log Out", -> {user_log_out}
          end
          
          
@@ -66,6 +75,7 @@ class Interface
      #helper method to get a list of superheros associated with current user
      def display_user_superheros
       HeroMan.go
+      puts"#########################################################################################"
       puts self.user.superheros.all_names_and_descrip.uniq
       sleep 5
       self.main_menu()
@@ -110,6 +120,9 @@ class Interface
       self.main_menu()
     end
 
+
+
+    #this method will return user to welcome window 
 
 
 
