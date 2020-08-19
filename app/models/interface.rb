@@ -44,9 +44,9 @@ class Interface
          prompt.select("What would you like to do?") do |menu|
           menu.choice "View Your Superheros", -> {display_user_superheros}
           menu.choice "Create A Superhero", -> {display_and_add_a_superhero}
-          menu.choice "Give Your Superhero A Superpower", ->{display_and_add_superpower}
-          menu.choice "Add Your Superhero To An Organization", ->{display_and_add_orgs}
-          menu.choice "Edit Your Superheros", -> {}
+          menu.choice "Give Your Superhero A Superpower/Edit", ->{display_and_add_superpower}
+          menu.choice "Add Your Superhero To An Organization/Edit", ->{display_and_add_orgs}
+          # menu.choice "Edit Your Superheros", -> {}
           menu.choice "Remove Your Superheros", -> {}
           menu.choice "Exit And Log Out", -> {}
          end
@@ -69,8 +69,18 @@ class Interface
         self.main_menu()
      end
 
+  # This helper method will check to see if user has choosen a superhero first
+  def superhero_choosen?
+    if self.user.superheros=[]
+      puts "You must create a Superhero first!"
+      sleep 3
+      self.main_menu()
+    end
+  end
+
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
+      superhero_choosen?()
       
        super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
        chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
@@ -78,27 +88,18 @@ class Interface
     #  binding.pry
        self.main_menu()
     end
+  
 
      #This helper method will add a superhero to an organization
     def display_and_add_orgs
+      superhero_choosen?()
+
       super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
       choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
-       Superhero.update(super_to_add_power, organization_id:  choesen_org) 
-
+      Superhero.update(super_to_add_power, organization_id:  choesen_org) 
+       #binding.pry
       self.main_menu()
     end
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

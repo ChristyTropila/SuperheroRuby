@@ -35,7 +35,7 @@ class Superhero < ActiveRecord::Base
             elsif !hero.organization
                 " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n"
             else 
-                " NAME: #{hero.name}\n SUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
+                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
           
             end
         end
@@ -92,7 +92,7 @@ class Superhero < ActiveRecord::Base
     #     end
     # end
         
-    end
+    # end
 
 
 
