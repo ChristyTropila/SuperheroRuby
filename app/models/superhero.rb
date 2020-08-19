@@ -27,19 +27,27 @@ class Superhero < ActiveRecord::Base
       #this method interpolates the name of supehero and its associated superpowers and organizations.
       #accounts for possiblity of superheros having yet to be assigned a superpower or organization
     def self.all_names_and_descrip
-         Superhero.all.map do |hero|
+   
+     results=Superhero.all.map do |hero|
             if !hero.superpower && !hero.organization
-                " NAME: #{hero.name}"
+                "NAME: #{hero.name}
+                         \n "
             elsif !hero.superpower
-                " NAME: #{hero.name}\nORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
+                "NAME: #{hero.name}\nORGANIZATION: #{hero.organization.name}--#{hero.organization.description}
+                         \n"
             elsif !hero.organization
-                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n"
+                 "NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}
+                         \n"
             else 
-                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
-          
+                "NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}---#{hero.superpower.description}\nORGANIZATION: #{hero.organization.name}---#{hero.organization.description}
+                         \n"
             end
-        end
+    
     end
+  
+    
+        
+end
 
 
 
