@@ -18,7 +18,7 @@ def self.login
   @@userInfo=TTY::Prompt.new.ask("What is your name?")
    logged_in=User.find_by(name: @@userInfo)
      if !logged_in
-     "This user does not exist!"
+     "This user does not exist! Try again."
      end
      logged_in
  end

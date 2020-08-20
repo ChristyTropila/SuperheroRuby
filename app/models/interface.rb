@@ -69,14 +69,13 @@ class Interface
          user.reload
 
 puts"  
-  #####                                                                 
- #     # #    # #####  ###### #####  #    # ###### #####   ####   ####  
- #       #    # #    # #      #    # #    # #      #    # #    # #      
-  #####  #    # #    # #####  #    # ###### #####  #    # #    #  ####  
-       # #    # #####  #      #####  #    # #      #####  #    #      # 
- #     # #    # #      #      #   #  #    # #      #   #  #    # #    # 
-  #####   ####  #      ###### #    # #    # ###### #    #  ####   ####  
-                                                                                                        
+
+███████╗██╗   ██╗██████╗ ███████╗██████╗ ██╗  ██╗███████╗██████╗  ██████╗ ███████╗██╗██╗██╗██╗
+██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗██║  ██║██╔════╝██╔══██╗██╔═══██╗██╔════╝██║██║██║██║
+███████╗██║   ██║██████╔╝█████╗  ██████╔╝███████║█████╗  ██████╔╝██║   ██║███████╗██║██║██║██║
+╚════██║██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗██╔══██║██╔══╝  ██╔══██╗██║   ██║╚════██║╚═╝╚═╝╚═╝╚═╝
+███████║╚██████╔╝██║     ███████╗██║  ██║██║  ██║███████╗██║  ██║╚██████╔╝███████║██╗██╗██╗██╗
+╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝╚═╝╚═╝╚═╝                                                                                          
                                                                                               
 ".colorize(:blue)
 
@@ -137,6 +136,8 @@ puts"
         user.reload
         system 'clear'
         choices=iterator_heros
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "\n"
         choosen_superhero=prompt.select("Choose A Superhero Please", choices )
         userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
         # binding.pry
@@ -151,6 +152,8 @@ puts"
         user.reload
         system 'clear'
         superhero_choosen?
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "\n"
         choices=self.user.superheros.all_names
         super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
         chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
@@ -165,6 +168,8 @@ puts"
         user.reload
         system 'clear'
         superhero_choosen?
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "\n"
         choices=self.user.superheros.all_names
         super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
         choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
