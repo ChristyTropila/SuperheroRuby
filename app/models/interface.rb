@@ -129,17 +129,18 @@ class Interface
       self.main_menu()
    end
 
-# # This helper method will check to see if user has choosen a superhero first
-# def superhero_choosen?
-#   if self.user.superheros={}
-#     puts "You must create a Superhero first!"
-#     sleep 3
-#     self.main_menu()
-#   end
-# end
+# This helper method will check to see if user has choosen a superhero first
+def superhero_choosen?
+  if self.user.superheros.empty?
+    puts "You must create a Superhero first!"
+    sleep 3
+    self.main_menu()
+  end
+end
 
  #This helper method will list all superpowers and assign to a superhero
   def display_and_add_superpower
+    superhero_choosen?
      super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
      chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
      Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
@@ -150,7 +151,7 @@ class Interface
 
    #This helper method will add a superhero to an organization
   def display_and_add_orgs
-    #superhero_choosen?()
+    superhero_choosen?()
     super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
     choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
     Superhero.update(super_to_add_power, organization_id:  choesen_org)
