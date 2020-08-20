@@ -14,34 +14,71 @@ class Superhero < ActiveRecord::Base
 
     #CRUD METHODS
 
-
     #return a hash of all heros with name id key value pairs
     def self.all_names
-        Superhero.all.map do |hero|
+        result=Superhero.all.map do |hero|
             {hero.name => hero.id}
            # binding.pry
         end
+        result
+    # #    binding.pry
+     end
+
+
+    
+      #this method interpolates the name of supehero and its associated superpowers and organizations.
+      #accounts for possiblity of superheros having yet to be assigned a superpower or organization
+    def self.all_names_and_descrip
+   
+     results=Superhero.all.reload.map do |hero|
+     
+            if !hero.superpower && !hero.organization
+
+                " NAME: #{hero.name}
+                    \n"
+            elsif !hero.superpower
+                " NAME: #{hero.name}\nORGANIZATION: #{hero.organization.name}--#{hero.organization.description}
+                    \n"
+            elsif !hero.organization
+                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}
+                   \n"
+            else 
+                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}
+                  \n"
+          
+            end
+    
     end
+    
+end
 
+  
+    #this method should list out available superheros that have not already been chosen by them in the tty prompt menu.
+    #they can select "choose a superhero" on the menu and should not have any superheros that they have already chosen still on that list
+    #1)Get a list of all superheros
+    #2)Check to see if any superheros has a user_id that is equal to the current users id
+    #3)If no match, list that superhero
+    #4)If current user id matches the user_id of any superheros, do not display that superhero in the menu choices.
 
-    def self.all_superpowers
-        Superhero.all.map do |hero|
-            {hero.superpower => hero.id}
-
-            #binding.pry
-        end
-    end
-
-    def find_by_id(id)
-       Superhero.all.select do |hero|
-        if hero.id=id
-         hero
-        end
-    end
-        
-    end
-
-
+    # def self.names_not_chosen(id)
+    #    result= Superhero.all.map do |hero|
+    #    # binding.pry
+    #         if hero.user_id ==id
+    #         else 
+    #             {hero.name => hero.id}
+    #         end
+    #     end
+    #     result
+    # end
+      
+  
+    
+    
+     
+     def self.names_not_chosen(user)
+        superhero_arr=Superhero.all.select{|sh| !sh.users.include?(user)}
+        superhero_arr.pluck(:name)
+     end
 
 
 
