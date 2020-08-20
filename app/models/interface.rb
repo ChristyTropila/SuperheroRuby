@@ -34,7 +34,6 @@ class Interface
    def user_login_helper
       userReturnValue=User.login()
         until userReturnValue
-<<<<<<< HEAD
               userReturnValue=User.register()
         end
          self.user=userReturnValue
@@ -51,7 +50,7 @@ class Interface
           self.main_menu
      end
 
-     #
+     #log_out
     def user_log_out
        system 'clear'
        welcome()
@@ -91,7 +90,11 @@ class Interface
       puts " You currently have #{self.user.superheros.count} Superheros"
       puts "\n"
       puts self.user.superheros.all_names_and_descrip
+      sleep 7
+      self.main_menu()
      end
+
+
 
      #This helper method will add a superhero to a users collection
      def display_and_add_a_superhero
@@ -104,7 +107,6 @@ class Interface
 
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
-      # superhero_choosen?()
         choices=self.user.superheros.all_names
        super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
        chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
@@ -117,7 +119,6 @@ class Interface
      #This helper method will add a superhero to an organization
     def display_and_add_orgs
       choices=self.user.superheros.all_names
-
       super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
       choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
       Superhero.update(super_to_add_power, organization_id:  choesen_org) 

@@ -24,12 +24,6 @@ class Superhero < ActiveRecord::Base
     # #    binding.pry
      end
 
-    # def self.all_name_no_user
-    #    result=Superhero.all.select do |hero|
-    #       hero.user
-
-
-
 
     
       #this method interpolates the name of supehero and its associated superpowers and organizations.
@@ -37,9 +31,9 @@ class Superhero < ActiveRecord::Base
     def self.all_names_and_descrip
    
      results=Superhero.all.reload.map do |hero|
-        !user.superheroes.include?(superhero)
+     
             if !hero.superpower && !hero.organization
-<<<<<<< HEAD
+
                 " NAME: #{hero.name}
                     \n"
             elsif !hero.superpower
@@ -52,19 +46,6 @@ class Superhero < ActiveRecord::Base
                 " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}
                   \n"
           
-=======
-                "NAME: #{hero.name}
-                         \n "
-            elsif !hero.superpower
-                "NAME: #{hero.name}\nORGANIZATION: #{hero.organization.name}--#{hero.organization.description}
-                         \n"
-            elsif !hero.organization
-                 "NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}
-                         \n"
-            else 
-                "NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}---#{hero.superpower.description}\nORGANIZATION: #{hero.organization.name}---#{hero.organization.description}
-                         \n"
->>>>>>> 6852d2ef4ed67b79db408c94d326ccbc670467c5
             end
     
     end
@@ -92,42 +73,7 @@ end
       
   
     
-        
-
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # def self.all_superpowers
-    #   superVar=Superpower.all.map do |hero|
-    #   3     if hero.superheros==self
-    #            hero.name
-    #       #  binding.pry
-    #     end
-    # end
-    #              #binding.pry
-    #     end
-
->>>>>>> 6852d2ef4ed67b79db408c94d326ccbc670467c5
+    
      
      def self.names_not_chosen(user)
         superhero_arr=Superhero.all.select{|sh| !sh.users.include?(user)}
