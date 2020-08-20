@@ -12,7 +12,7 @@ class Interface
 
    #This menu will first be displayed when a user runs rake :start
    def welcome
-       # Banner.go
+      #  Banner.go
         user_inpupt=prompt.select("Welcome to the Game of Superheros.") do |menu|
           menu.choice "Register an Account", -> {register_user_helper}
           menu.choice "Log Into Existing Account", -> {user_login_helper}
@@ -50,13 +50,40 @@ class Interface
 
      #After a user is registered, this is the main menu that user will see
      def main_menu
+
       
          user.reload
-         system "clear"
-         puts"****************************************************************************************************************************************"
-         puts"****************************************************************************************************************************************"
-         puts"****************************************************************************************************************************************"
-         puts"                                                                                                                          "
+         
+
+
+puts"       
+
+
+                m$$$$L               d$$b    c$$$$c   d$ d$b
+             J$$P  m$$$          $$ $P ?$  $$P  d$b J$$$P ?$L
+             $$$b           4$$   $$P  c$  $$cc$$P  $$$
+              $$$$b     $$$  $$$  $$$$$P   $$m      $$P
+                 $$$b   $$$  4$$$  $$$      ?$$$$   $$P
+                   $$bc  $$bd$ $$P $$P 
+         c$$$m      $$$L  `$P        
+         ?$$$$L   J$$$P             
+           `$$$$$$$$P  
+          
+                                                                                
+                                                                                                          
+                                                            88                                             
+                                                            88                                             
+                                                            88                                             
+                                                            88,dPPYba,   ,adPPYba, 8b,dPPYba,  ,adPPYba,   
+                                                            88P'     $$ a8P_____88 88P'   Y8  8"     "8a  
+                                                            $$       88 $$          8b        d8      8a
+                                                            88       88 #,     ,aa  88         $     ,8a
+                                                            88       88   ee888888 '88           8$$$  
+                      
+                      
+ ".colorize(:blue)
+
+
          puts "WELCOME, #{self.user.name}!!"
          puts "                            "
          prompt.select("What would you like to do?") do |menu|
@@ -85,18 +112,35 @@ class Interface
       self.main_menu()
      end
 
+
+
+
+
+     #this method will make sure that the user isn't seeing any superheros that they already have collected
     def iterator_heros
         results=[]
-        if self.user.superheros.length > 0
-             results << Superhero.first#find an array method
-                else
-                Superhero.all.map do |hero| 
-                    {hero.name => hero.id}
-                   # binding.pry
-                end
+        other_results=[]
+        Superhero.all.map do |hero| 
+          if self.user.superheros.id==self.user.id
+            binding.pry
+           results << {hero.name => hero.id}
+          else
+           other_results <<  {hero.name => hero.id}
+          end
+        end
+        other_results
+      end
+
+                    # self.user.superheros.length > 0
+          #    results << Superhero.first.name#find an array method
+          #       else
+          #       Superhero.all.map do |hero| 
+          #           {hero.name => hero.id}
+          #          # binding.pry
+          #       end
              
-                end
-              end
+          #       end
+              
 
 
 

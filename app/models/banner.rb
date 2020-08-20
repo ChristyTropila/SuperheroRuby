@@ -367,7 +367,7 @@ class Banner
 
     
 def self.animation
-    4.times do
+    3.times do
         Banner.frame_one
         Banner.frame_two
         Banner.frame_three
@@ -379,7 +379,7 @@ def self.animation
 end
 
 
-    def go
+    def self.go
         system 'clear'
         self.animation
       end
