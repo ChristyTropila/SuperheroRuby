@@ -1,30 +1,40 @@
 require 'pry'
 
 class Interface
+  attr_reader :prompt
+  attr_accessor :user, :superpower, :superhero, :heroman, :banner
 
-    attr_reader :prompt
-    attr_accessor :user, :superpower, :superhero, :heroman, :banner
 
+  def initialize
+      @prompt = TTY::Prompt.new
+   end
 
-    def initialize
-        @prompt = TTY::Prompt.new
-     end
+   #This menu will first be displayed when a user runs rake :start
+   def welcome
+       # Banner.go
+        user_inpupt=prompt.select("Welcome to the Game of Superheros.") do |menu|
+          menu.choice "Register an Account", -> {register_user_helper}
+          menu.choice "Log Into Existing Account", -> {user_login_helper}
 
-     #This menu will first be displayed when a user runs rake :start
-     def welcome
-         # Banner.go
-          user_inpupt=prompt.select("Welcome to the Game of Superheros.") do |menu|
-            menu.choice "Register an Account", -> {register_user_helper}
-            menu.choice "Log Into Existing Account", -> {user_login_helper}
-
-          end
         end
+      end
 
 
-     #Register a user
-     def register_user_helper
-        userReturnValue=User.register()
+   #Register a user
+   def register_user_helper
+      userReturnValue=User.register()
+      until userReturnValue
+            userReturnValue=User.register()
+      end
+       self.user=userReturnValue
+       self.main_menu
+   end
+
+   #Login 
+   def user_login_helper
+      userReturnValue=User.login()
         until userReturnValue
+<<<<<<< HEAD
               userReturnValue=User.register()
         end
          self.user=userReturnValue
@@ -113,22 +123,52 @@ class Interface
       Superhero.update(super_to_add_power, organization_id:  choesen_org) 
        #binding.pry
       self.main_menu()
-    end
+   end
+
+# # This helper method will check to see if user has choosen a superhero first
+# def superhero_choosen?
+#   if self.user.superheros={}
+#     puts "You must create a Superhero first!"
+#     sleep 3
+#     self.main_menu()
+#   end
+# end
+
+ #This helper method will list all superpowers and assign to a superhero
+  def display_and_add_superpower
+     super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
+     chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
+     Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
+  #  binding.pry
+     self.main_menu()
+  end
+
+
+   #This helper method will add a superhero to an organization
+  def display_and_add_orgs
+    #superhero_choosen?()
+    super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
+    choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
+    Superhero.update(super_to_add_power, organization_id:  choesen_org)
+    self.main_menu()
+  end
 
 
 
-    #this method will return user to welcome window 
+
+  #This method list out users superheros and gives them the ability to remove them
+  def remove_superhero
+    user_input=prompt.multi_select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names_and_descrip) 
+    user_sup=UserSuperhero.delete(id: self.user.id, superhero_id: user_input)
+ #   self.user.update()
+    # hero=Superhero.delete(user_id: self.user.id)
+    # userdel=User.delete(superhero_id: user_input)
+    # self.main_menu()
+
+  end
 
 
 
 
 
-
-
-
-
-
-
-      end
-
-  
+end

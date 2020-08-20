@@ -9,4 +9,5 @@ gem "sqlite3"
 gem "pry"
 gem "faker"
 gem "tty-prompt"
+gem 'activerecord-reset-pk-sequence'
 gem "colorize"

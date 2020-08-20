@@ -12,10 +12,14 @@ class UserSuperhero < ActiveRecord::Base
 
 
          #displays all superheros
-         def self.all_names
-            Superhero.all.map do |heros|
-               {heros.name => heros.id}
-                end
+         def self.all_names(id)
+           selection=  self.all.map do |current|
+              if  current.user_id==id
+                  current.superhero.name
+                #  binding.pry
+             end
+            end
+            selection
             end
 
 
@@ -26,6 +30,7 @@ class UserSuperhero < ActiveRecord::Base
                 end
             end
 
+<<<<<<< HEAD
             
             # def self.all_name_no_user
             #     result=UserSuperhero.all.select do |sup|
@@ -38,6 +43,9 @@ class UserSuperhero < ActiveRecord::Base
             #     end
             #  #   binding.pry
             # end
+=======
+          
+>>>>>>> 6852d2ef4ed67b79db408c94d326ccbc670467c5
         
 
 
