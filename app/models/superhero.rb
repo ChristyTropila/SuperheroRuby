@@ -21,7 +21,12 @@ class Superhero < ActiveRecord::Base
            # binding.pry
         end
         result
-    end
+    # #    binding.pry
+     end
+
+    # def self.all_name_no_user
+    #    result=Superhero.all.select do |hero|
+    #       hero.user
 
 
       #this method interpolates the name of supehero and its associated superpowers and organizations.
@@ -29,72 +34,28 @@ class Superhero < ActiveRecord::Base
     def self.all_names_and_descrip
          Superhero.all.map do |hero|
             if !hero.superpower && !hero.organization
-                " NAME: #{hero.name}"
+                " NAME: #{hero.name}
+                    \n"
             elsif !hero.superpower
-                " NAME: #{hero.name}\nORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
+                " NAME: #{hero.name}\nORGANIZATION: #{hero.organization.name}--#{hero.organization.description}
+                    \n"
             elsif !hero.organization
-                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n"
+                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}
+                   \n"
             else 
-                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}"
+                " NAME: #{hero.name}\nSUPERPOWER: #{hero.superpower.name}--#{hero.superpower.description}\n ORGANIZATION: #{hero.organization.name}--#{hero.organization.description}
+                  \n"
           
             end
         end
     end
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # def self.all_superpowers
-    #   superVar=Superpower.all.map do |hero|
-    #        if hero.superheros==self
-    #            hero.name
-    #       #  binding.pry
-    #     end
-    # end
-    #              #binding.pry
-    #     end
-
      
-    # def self.display_name_and_descrip
-    #     Superpower.all.map do |power|
-    #       #  binding.pry
-    #          if power.superheros==self
-    #         puts "#{power.name} => #{power.description}"
-    #         end
-    #     end
-    #     end
-
-    
-    
-
-    # def find_by_id(id)
-    #    Superhero.all.select do |hero|
-    #     if hero.id=id
-    #      hero
-    #     end
-    # end
-        
-    # end
-
-
+     def self.names_not_chosen(user)
+        superhero_arr=Superhero.all.select{|sh| !sh.users.include?(user)}
+        superhero_arr.pluck(:name)
+     end
 
 
 

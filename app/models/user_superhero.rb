@@ -27,6 +27,17 @@ class UserSuperhero < ActiveRecord::Base
             end
 
             
+            # def self.all_name_no_user
+            #     result=UserSuperhero.all.select do |sup|
+            #         sup.superhero_id==nil
+               
+            #     end
+            #     result.map do |sup|
+            #         sup.superhero
+            #       #  binding.pry
+            #     end
+            #  #   binding.pry
+            # end
         
 
 

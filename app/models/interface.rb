@@ -74,34 +74,29 @@ class Interface
 
      #helper method to get a list of superheros associated with current user
      def display_user_superheros
-      HeroMan.go
-      puts"#########################################################################################"
-      puts self.user.superheros.all_names_and_descrip.uniq
-      sleep 5
-      self.main_menu()
+      user.reload
+      system 'clear'
+    # HeroMan.go
+      puts "\n"
+      puts " You currently have #{self.user.superheros.count} Superheros"
+      puts "\n"
+      puts self.user.superheros.all_names_and_descrip
      end
 
      #This helper method will add a superhero to a users collection
      def display_and_add_a_superhero
-        choosen_superhero_id=prompt.select("Choose A Superhero Please", Superhero.all_names)
-        userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero_id)
+      choices=Superhero.all_names
+        choosen_superhero=prompt.select("Choose A Superhero Please", choices )
+        userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
         self.main_menu()
      end
 
-  # This helper method will check to see if user has choosen a superhero first
-  def superhero_choosen?
-    if self.user.superheros=[]
-      puts "You must create a Superhero first!"
-      sleep 3
-      self.main_menu()
-    end
-  end
 
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
-      superhero_choosen?()
-      
-       super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
+      # superhero_choosen?()
+        choices=self.user.superheros.all_names
+       super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
        chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
        Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
     #  binding.pry
@@ -111,9 +106,9 @@ class Interface
 
      #This helper method will add a superhero to an organization
     def display_and_add_orgs
-      superhero_choosen?()
+      choices=self.user.superheros.all_names
 
-      super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
+      super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
       choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
       Superhero.update(super_to_add_power, organization_id:  choesen_org) 
        #binding.pry

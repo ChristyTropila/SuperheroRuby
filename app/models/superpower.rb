@@ -5,6 +5,9 @@ class Superpower < ActiveRecord::Base
     has_many :superheros
     has_many :organizations, through: :superheros
 
+
+
+    
     #method that prints out all names of Superpowers
      def self.all_names
         Superpower.all.map do |power|
