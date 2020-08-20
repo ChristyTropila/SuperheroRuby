@@ -7,7 +7,7 @@ class Interface
   
 
   def initialize
-      @prompt = TTY::Prompt.new
+      @prompt = TTY::Prompt.new(symbols: {markers: "*"})
    end
 
    #This menu will first be displayed when a user runs rake :start
@@ -84,7 +84,7 @@ puts"
  ".colorize(:blue)
 
 
-         puts "WELCOME, #{self.user.name}!!"
+         puts "WELCOME, #{self.user.name}!!".bold
          puts "                            "
          prompt.select("What would you like to do?") do |menu|
           menu.choice "View Your Superheros", -> {display_user_superheros}
@@ -123,25 +123,15 @@ puts"
         Superhero.all.select do |hero| 
         #  binding.pry
         if  self.user.superheros.include?(hero)
-            #binding.pry
            results << {hero.name => hero.id}
         else  
-           other_results <<  {hero.name => hero.id}
+           other_results << {hero.name => hero.id}
         end
         end
         other_results
       end
 
-                    # self.user.superheros.length > 0
-          #    results << Superhero.first.name#find an array method
-          #       else
-          #       Superhero.all.map do |hero| 
-          #           {hero.name => hero.id}
-          #          # binding.pry
-          #       end
-             
-          #       end
-              
+        
 
 
 
