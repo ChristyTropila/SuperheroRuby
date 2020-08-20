@@ -73,7 +73,7 @@ class Interface
           menu.choice "Create A Superhero", -> {display_and_add_a_superhero}
           menu.choice "Give Your Superhero A Superpower/Edit", ->{display_and_add_superpower}
           menu.choice "Add Your Superhero To An Organization/Edit", ->{display_and_add_orgs}
-          menu.choice "Delete A Superheros From Your List", -> {remove_superhero_from_usr}
+          menu.choice "Delete A Superheros From Your List", -> {remove_superhero}
           menu.choice "Exit And Log Out", -> {user_log_out}
          end
          
@@ -98,10 +98,13 @@ class Interface
 
      #This helper method will add a superhero to a users collection
      def display_and_add_a_superhero
+    #  binding.pry
       choices=Superhero.all_names
         choosen_superhero=prompt.select("Choose A Superhero Please", choices )
         userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
+      #  binding.pry
         self.main_menu()
+       
      end
 
 
@@ -159,14 +162,12 @@ class Interface
 
   #This method list out users superheros and gives them the ability to remove them
   def remove_superhero
-    user_input=prompt.multi_select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names_and_descrip) 
-    user_sup=UserSuperhero.delete(id: self.user.id, superhero_id: user_input)
- #   self.user.update()
-    # hero=Superhero.delete(user_id: self.user.id)
-    # userdel=User.delete(superhero_id: user_input)
-    # self.main_menu()
-
-  end
+    user_input=prompt.select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names) 
+    result=UserSuperhero.all.find_by(user_id: self.user.id, superhero_id: user_input)
+    result.delete
+     # binding.pry
+     self.main_menu()
+end
 
 
 
