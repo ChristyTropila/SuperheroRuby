@@ -1,3 +1,4 @@
+
 class Banner
     def self.frame_one
         puts "          

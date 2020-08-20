@@ -1,4 +1,7 @@
+
+
 require 'pry'
+
 
 class Interface
   attr_reader :prompt
@@ -6,18 +9,30 @@ class Interface
   
   
 
-  def initialize
+   def initialize
       @prompt = TTY::Prompt.new(symbols: {markers: "*"})
    end
 
    #This menu will first be displayed when a user runs rake :start
    def welcome
-      #  Banner.go
-        user_inpupt=prompt.select("Welcome to the Game of Superheros.") do |menu|
-          menu.choice "Register an Account", -> {register_user_helper}
-          menu.choice "Log Into Existing Account", -> {user_login_helper}
-
+        Banner.go
+        puts"    
+       #                    #######                  #######                      ######                             #####                          #     #                             ### 
+       #  ####  # #    #       #    #    # ######    #       #    # #    #        #     # #    # # #      #####     #     #  ####  #    # ######    #     # ###### #####   ####   ####  ### 
+       # #    # # ##   #       #    #    # #         #       #    # ##   #        #     # #    # # #      #    #    #       #    # ##  ## #         #     # #      #    # #    # #      ### 
+       # #    # # # #  #       #    ###### #####     #####   #    # # #  #        ######  #    # # #      #    #     #####  #    # # ## # #####     ####### #####  #    # #    #  ####   #  
+ #     # #    # # #  # #       #    #    # #         #       #    # #  # # ###    #     # #    # # #      #    #          # #    # #    # #         #     # #      #####  #    #      #     
+ #     # #    # # #   ##       #    #    # #         #       #    # #   ## ###    #     # #    # # #      #    #    #     # #    # #    # #         #     # #      #   #  #    # #    # ### 
+  #####   ####  # #    #       #    #    # ######    #        ####  #    # ###    ######   ####  # ###### #####      #####   ####  #    # ######    #     # ###### #    #  ####   ####  ### 
+                                                                                                                                                                                                                                                                                                                                   
+    ".colorize(:blue)
+        user_inpupt=prompt.select("\nWelcome to the Game of Superheros.") do |menu|
+          menu.choice "\n\nRegister an Account", -> {register_user_helper}
+          menu.choice "\nLog Into Existing Account", -> {user_login_helper}
+       
         end
+
+      system 'clear'
       end
 
 
@@ -50,49 +65,29 @@ class Interface
 
      #After a user is registered, this is the main menu that user will see
      def main_menu
-
-      
+      system 'clear'
          user.reload
-         
 
+puts"  
+  #####                                                                 
+ #     # #    # #####  ###### #####  #    # ###### #####   ####   ####  
+ #       #    # #    # #      #    # #    # #      #    # #    # #      
+  #####  #    # #    # #####  #    # ###### #####  #    # #    #  ####  
+       # #    # #####  #      #####  #    # #      #####  #    #      # 
+ #     # #    # #      #      #   #  #    # #      #   #  #    # #    # 
+  #####   ####  #      ###### #    # #    # ###### #    #  ####   ####  
+                                                                                                        
+                                                                                              
+".colorize(:blue)
 
-puts"       
-
-
-                m$$$$L               d$$b    c$$$$c   d$ d$b
-             J$$P  m$$$          $$ $P ?$  $$P  d$b J$$$P ?$L
-             $$$b           4$$   $$P  c$  $$cc$$P  $$$
-              $$$$b     $$$  $$$  $$$$$P   $$m      $$P
-                 $$$b   $$$  4$$$  $$$      ?$$$$   $$P
-                   $$bc  $$bd$ $$P $$P 
-         c$$$m      $$$L  `$P        
-         ?$$$$L   J$$$P             
-           `$$$$$$$$P  
-          
-                                                                                
-                                                                                                          
-                                                            88                                             
-                                                            88                                             
-                                                            88                                             
-                                                            88,dPPYba,   ,adPPYba, 8b,dPPYba,  ,adPPYba,   
-                                                            88P'     $$ a8P_____88 88P'   Y8  8"     "8a  
-                                                            $$       88 $$          8b        d8      8a
-                                                            88       88 #,     ,aa  88         $     ,8a
-                                                            88       88   ee888888 '88           8$$$  
-                      
-                      
- ".colorize(:blue)
-
-
-         puts "WELCOME, #{self.user.name}!!".bold
-         puts "                            "
-         prompt.select("What would you like to do?") do |menu|
-          menu.choice "View Your Superheros", -> {display_user_superheros}
-          menu.choice "Create A Superhero", -> {display_and_add_a_superhero}
-          menu.choice "Give Your Superhero A Superpower/Edit", ->{display_and_add_superpower}
-          menu.choice "Add Your Superhero To An Organization/Edit", ->{display_and_add_orgs}
-          menu.choice "Delete A Superheros From Your List", -> {remove_superhero}
-          menu.choice "Exit And Log Out", -> {user_log_out}
+         puts "\n\nWELCOME, #{self.user.name}!!".bold
+         prompt.select("\nWhat would you like to do?") do |menu|
+          menu.choice "\n\n\nView Your Superheros", -> {display_user_superheros}
+          menu.choice "\nCreate A Superhero", -> {display_and_add_a_superhero}
+          menu.choice "\nGive Your Superhero A Superpower/Edit", ->{display_and_add_superpower}
+          menu.choice "\nAdd Your Superhero To An Organization/Edit", ->{display_and_add_orgs}
+          menu.choice "\nDelete A Superheros From Your List", -> {remove_superhero}
+          menu.choice "\nExit And Log Out", -> {user_log_out}
          end
          
          
@@ -103,9 +98,10 @@ puts"
      def display_user_superheros
       user.reload
       system 'clear'
-    # HeroMan.go
+      HeroMan.go
+      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       puts "\n"
-      puts " You currently have #{self.user.superheros.count} Superheros"
+      puts "          ~~~~~~~~~~~~ You currently have #{self.user.superheros.count} Superheros ~~~~~~~~~~~~"
       puts "\n"
       puts self.user.superheros.all_names_and_descrip
       sleep 7
@@ -136,67 +132,67 @@ puts"
 
 
  #This helper method will add a superhero to a users collection
- def display_and_add_a_superhero
-  #binding.pry
-  user.reload
-  system 'clear'
-  choices=iterator_heros
-  choosen_superhero=prompt.select("Choose A Superhero Please", choices )
-  userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
-  # binding.pry
-  system 'clear'
-  self.main_menu()
-       
-end
+    def display_and_add_a_superhero
+        #binding.pry
+        user.reload
+        system 'clear'
+        choices=iterator_heros
+        choosen_superhero=prompt.select("Choose A Superhero Please", choices )
+        userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
+        # binding.pry
+        system 'clear'
+        self.main_menu()
+            
+    end
 
 
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
-      user.reload
-      system 'clear'
-       superhero_choosen?
-       choices=self.user.superheros.all_names
-       super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
-       chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
-       Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
-    #  binding.pry
-       self.main_menu()
+        user.reload
+        system 'clear'
+        superhero_choosen?
+        choices=self.user.superheros.all_names
+        super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
+        chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
+        Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
+      #  binding.pry
+        self.main_menu()
     end
   
 
  #This helper method will add a superhero to an organization
-def display_and_add_orgs
-  user.reload
-  system 'clear'
-  superhero_choosen?
-  choices=self.user.superheros.all_names
-  super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
-  choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
-  Superhero.update(super_to_add_power, organization_id:  choesen_org) 
-  #binding.pry
-  self.main_menu()
-end
+    def display_and_add_orgs
+        user.reload
+        system 'clear'
+        superhero_choosen?
+        choices=self.user.superheros.all_names
+        super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
+        choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
+        Superhero.update(super_to_add_power, organization_id:  choesen_org) 
+        #binding.pry
+        self.main_menu()
+     end
 
 # This helper method will check to see if user has choosen a superhero first
-def superhero_choosen?
-  if self.user.superheros.empty?
-    puts "You must create a Superhero first!"
-    sleep 3
-    self.main_menu()
-  end
-end
+    def superhero_choosen?
+       if self.user.superheros.empty?
+         puts "You must create a Superhero first!"
+         sleep 3
+        self.main_menu()
+       end
+    end
 
 
   #This method list out users superheros and gives them the ability to remove them
-def remove_superhero
-  user.reload
-  system 'clear'
-  user_input=prompt.select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names) 
-  result=UserSuperhero.all.find_by(user_id: self.user.id, superhero_id: user_input)
-  result.delete
-  # binding.pry
-  self.main_menu()
-end
+    def remove_superhero
+      user.reload
+      system 'clear'
+      user_input=prompt.select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names) 
+      result=UserSuperhero.all.find_by(user_id: self.user.id, superhero_id: user_input)
+      result.delete
+      # binding.pry
+      self.main_menu()
+    end   
 
 
 
