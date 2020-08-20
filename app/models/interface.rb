@@ -95,22 +95,23 @@ class Interface
      end
 
 
-
-     #This helper method will add a superhero to a users collection
-     def display_and_add_a_superhero
-    #  binding.pry
-      choices=Superhero.all_names
-        choosen_superhero=prompt.select("Choose A Superhero Please", choices )
-        userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
-      #  binding.pry
-        self.main_menu()
+ #This helper method will add a superhero to a users collection
+ def display_and_add_a_superhero
+  #binding.pry
+  choices=Superhero.iterator_heros
+  choosen_superhero=prompt.select("Choose A Superhero Please", choices )
+  userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
+  # binding.pry
+  system 'clear'
+  self.main_menu()
        
-     end
+end
 
 
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
-        choices=self.user.superheros.all_names
+       superhero_choosen?
+       choices=self.user.superheros.all_names
        super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
        chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
        Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
@@ -119,15 +120,16 @@ class Interface
     end
   
 
-     #This helper method will add a superhero to an organization
-    def display_and_add_orgs
-      choices=self.user.superheros.all_names
-      super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
-      choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
-      Superhero.update(super_to_add_power, organization_id:  choesen_org) 
-       #binding.pry
-      self.main_menu()
-   end
+ #This helper method will add a superhero to an organization
+def display_and_add_orgs
+  superhero_choosen?
+  choices=self.user.superheros.all_names
+  super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
+  choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
+  Superhero.update(super_to_add_power, organization_id:  choesen_org) 
+  #binding.pry
+  self.main_menu()
+end
 
 # This helper method will check to see if user has choosen a superhero first
 def superhero_choosen?
@@ -138,36 +140,14 @@ def superhero_choosen?
   end
 end
 
- #This helper method will list all superpowers and assign to a superhero
-  def display_and_add_superpower
-    superhero_choosen?
-     super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
-     chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
-     Superhero.update(super_to_add_power, superpower_id: chosen_superpower)
-  #  binding.pry
-     self.main_menu()
-  end
-
-
-   #This helper method will add a superhero to an organization
-  def display_and_add_orgs
-    superhero_choosen?()
-    super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", self.user.superheros.all_names)
-    choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
-    Superhero.update(super_to_add_power, organization_id:  choesen_org)
-    self.main_menu()
-  end
-
-
-
 
   #This method list out users superheros and gives them the ability to remove them
-  def remove_superhero
-    user_input=prompt.select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names) 
-    result=UserSuperhero.all.find_by(user_id: self.user.id, superhero_id: user_input)
-    result.delete
-     # binding.pry
-     self.main_menu()
+def remove_superhero
+  user_input=prompt.select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names) 
+  result=UserSuperhero.all.find_by(user_id: self.user.id, superhero_id: user_input)
+  result.delete
+  # binding.pry
+  self.main_menu()
 end
 
 

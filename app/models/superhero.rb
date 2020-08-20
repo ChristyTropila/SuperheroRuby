@@ -16,14 +16,45 @@ class Superhero < ActiveRecord::Base
 
     #return a hash of all heros with name id key value pairs
     def self.all_names
-        result=Superhero.all.map do |hero|
+        Superhero.all.map do |hero| 
             {hero.name => hero.id}
            # binding.pry
         end
-        result
-    # #    binding.pry
+    end
+
+    
+def self.iterator_heros
+      hero_id_hash=UserSuperhero.user_with_no_match.map do |heros|
+     #   binding.pry
+       {heros.name => heros.id} 
+        # binding.pry
+end
+     hero_id_hash
      end
 
+  
+
+
+     
+    
+
+
+#     def self.all_names(user)
+#         result=UserSuperhero.all.select do |hero|
+#            hero.id!=user.id
+#         end
+#     sup_result= result.map do |hero|
+#         binding.pry
+#         hero.superhero_id
+#         end
+#       final= sup_result.map do |fin_hero|
+#        # {fin_hero.name => fin_hero.id}
+#         binding.pry
+
+#      end
+#      final
+#   #   binding.pry
+#     end
 
     
       #this method interpolates the name of supehero and its associated superpowers and organizations.
