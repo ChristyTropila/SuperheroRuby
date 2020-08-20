@@ -120,13 +120,14 @@ puts"
     def iterator_heros
         results=[]
         other_results=[]
-        Superhero.all.map do |hero| 
-          if self.user.superheros.id==self.user.id
-            binding.pry
+        Superhero.all.select do |hero| 
+        #  binding.pry
+        if  self.user.superheros.include?(hero)
+            #binding.pry
            results << {hero.name => hero.id}
-          else
+        else  
            other_results <<  {hero.name => hero.id}
-          end
+        end
         end
         other_results
       end
