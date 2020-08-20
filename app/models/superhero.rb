@@ -23,14 +23,16 @@ class Superhero < ActiveRecord::Base
     end
 
     
-def self.iterator_heros
-      hero_id_hash=UserSuperhero.user_with_no_match.map do |heros|
-     #   binding.pry
-       {heros.name => heros.id} 
-        # binding.pry
-end
-     hero_id_hash
-     end
+# def self.iterator_heros
+
+# #    # binding.pry
+# #      hero_id_hash=UserSuperhero.user_with_no_match.uniq { |hero| hero.name }
+# # #      #   binding.pry
+# # #        {heros.name => heros.id} 
+# # #         # binding.pry
+# # # end
+# #      hero_id_hash
+#      end
 
   
 

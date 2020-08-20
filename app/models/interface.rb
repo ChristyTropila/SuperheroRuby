@@ -3,7 +3,8 @@ require 'pry'
 class Interface
   attr_reader :prompt
   attr_accessor :user, :superpower, :superhero, :heroman, :banner
-
+  
+  
 
   def initialize
       @prompt = TTY::Prompt.new
@@ -29,16 +30,6 @@ class Interface
        self.user=userReturnValue
        self.main_menu
    end
-
-   #Login 
-   def user_login_helper
-      userReturnValue=User.login()
-        until userReturnValue
-              userReturnValue=User.register()
-        end
-         self.user=userReturnValue
-         self.main_menu
-     end
 
      #Login 
      def user_login_helper
@@ -94,11 +85,27 @@ class Interface
       self.main_menu()
      end
 
+    def iterator_heros
+        results=[]
+        if self.user.superheros.length > 0
+             results << Superhero.first#find an array method
+                else
+                Superhero.all.map do |hero| 
+                    {hero.name => hero.id}
+                   # binding.pry
+                end
+             
+                end
+              end
+
+
 
  #This helper method will add a superhero to a users collection
  def display_and_add_a_superhero
   #binding.pry
-  choices=Superhero.iterator_heros
+  user.reload
+  system 'clear'
+  choices=iterator_heros
   choosen_superhero=prompt.select("Choose A Superhero Please", choices )
   userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
   # binding.pry
@@ -110,6 +117,8 @@ end
 
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
+      user.reload
+      system 'clear'
        superhero_choosen?
        choices=self.user.superheros.all_names
        super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
@@ -122,6 +131,8 @@ end
 
  #This helper method will add a superhero to an organization
 def display_and_add_orgs
+  user.reload
+  system 'clear'
   superhero_choosen?
   choices=self.user.superheros.all_names
   super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
@@ -143,12 +154,18 @@ end
 
   #This method list out users superheros and gives them the ability to remove them
 def remove_superhero
+  user.reload
+  system 'clear'
   user_input=prompt.select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names) 
   result=UserSuperhero.all.find_by(user_id: self.user.id, superhero_id: user_input)
   result.delete
   # binding.pry
   self.main_menu()
 end
+
+
+
+
 
 
 

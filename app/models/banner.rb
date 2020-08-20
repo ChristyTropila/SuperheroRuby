@@ -379,7 +379,7 @@ def self.animation
 end
 
 
-    def self.go
+    def go
         system 'clear'
         self.animation
       end
