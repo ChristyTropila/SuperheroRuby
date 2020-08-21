@@ -29,7 +29,7 @@ My first project at Flatiron! I built this project using the Command Line Interf
 4) TTY Prompt
 
 ### Video Demonstration
-https://youtu.be/Ctoe6kdR9n8
+https://youtu.be/Er9OPBmSoA8
 
 
 
@@ -37,5 +37,6 @@ https://youtu.be/Ctoe6kdR9n8
 ### Outside Resources
 
 http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20  (Text to ASCII generator) 
+
 www.giphy.com (superhero animation)
-```
+https://www.fantasynamegenerators.com/hero_names.php (name generator)
