@@ -4,7 +4,6 @@ class Interface
   attr_reader :prompt
   attr_accessor :user, :superpower, :superhero, :heroman, :banner
   
-
    
    def initialize
       @prompt = TTY::Prompt.new(symbols: {markers: "*"})
