@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 =======
 # Module One Final Project SUPERHEROS
 
@@ -31,7 +31,7 @@ My first project at Flatiron! I built this project using the Command Line Interf
 4) TTY Prompt
 
 ### Video Demonstration
-https://youtu.be/Ctoe6kdR9n8
+https://youtu.be/Er9OPBmSoA8
 
 
 
@@ -40,5 +40,5 @@ https://youtu.be/Ctoe6kdR9n8
 
 http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20  (Text to ASCII generator) 
 www.giphy.com (superhero animation)
-```
->>>>>>> 7e989e06f89c5d41c9592d8478f4d735034bf248
+https://www.fantasynamegenerators.com/hero_names.php (name generator)
+
