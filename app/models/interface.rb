@@ -1,14 +1,11 @@
-
-
 require 'pry'
-
 
 class Interface
   attr_reader :prompt
   attr_accessor :user, :superpower, :superhero, :heroman, :banner
   
-  
 
+   
    def initialize
       @prompt = TTY::Prompt.new(symbols: {markers: "*"})
    end
@@ -36,6 +33,9 @@ class Interface
       end
 
 
+
+
+
    #Register a user
    def register_user_helper
       userReturnValue=User.register()
@@ -45,6 +45,9 @@ class Interface
        self.user=userReturnValue
        self.main_menu
    end
+
+
+
 
      #Login 
      def user_login_helper
@@ -59,9 +62,22 @@ class Interface
      #log_out
     def user_log_out
        system 'clear'
+       puts"
+       
+████████╗██╗  ██╗ █████╗ ███╗   ██╗██╗  ██╗███████╗    ███████╗ ██████╗ ██████╗     ██████╗ ██╗      █████╗ ██╗   ██╗██╗███╗   ██╗ ██████╗ ██╗
+╚══██╔══╝██║  ██║██╔══██╗████╗  ██║██║ ██╔╝██╔════╝    ██╔════╝██╔═══██╗██╔══██╗    ██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝██║████╗  ██║██╔════╝ ██║
+   ██║   ███████║███████║██╔██╗ ██║█████╔╝ ███████╗    █████╗  ██║   ██║██████╔╝    ██████╔╝██║     ███████║ ╚████╔╝ ██║██╔██╗ ██║██║  ███╗██║
+   ██║   ██╔══██║██╔══██║██║╚██╗██║██╔═██╗ ╚════██║    ██╔══╝  ██║   ██║██╔══██╗    ██╔═══╝ ██║     ██╔══██║  ╚██╔╝  ██║██║╚██╗██║██║   ██║╚═╝
+   ██║   ██║  ██║██║  ██║██║ ╚████║██║  ██╗███████║    ██║     ╚██████╔╝██║  ██║    ██║     ███████╗██║  ██║   ██║   ██║██║ ╚████║╚██████╔╝██╗
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝    ╚═╝      ╚═════╝ ╚═╝  ╚═╝    ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝
+                                                                                                                                              
+".colorize(:blue)
+       sleep 3
        welcome()
     end
       
+
+
 
      #After a user is registered, this is the main menu that user will see
      def main_menu
@@ -147,6 +163,8 @@ puts"
     end
 
 
+
+
    #This helper method will list all superpowers and assign to a superhero
     def display_and_add_superpower
         user.reload
@@ -161,6 +179,7 @@ puts"
       #  binding.pry
         self.main_menu()
     end
+
   
 
  #This helper method will add a superhero to an organization
@@ -178,6 +197,8 @@ puts"
         self.main_menu()
      end
 
+
+
 # This helper method will check to see if user has choosen a superhero first
     def superhero_choosen?
        if self.user.superheros.empty?
@@ -186,6 +207,7 @@ puts"
         self.main_menu()
        end
     end
+
 
 
   #This method list out users superheros and gives them the ability to remove them
@@ -198,12 +220,6 @@ puts"
       # binding.pry
       self.main_menu()
     end   
-
-
-
-
-
-
 
 
 

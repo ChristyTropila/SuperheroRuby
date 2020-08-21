@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
     has_many :superheros, through: :user_superheros
 
 
-    #register a new user
+   #Register a new user
 def self.register
    @@userInfo=TTY::Prompt.new.ask("What is your name?")
 
@@ -14,16 +14,15 @@ def self.register
    end
 end
 
+   #User login varification
 def self.login
   @@userInfo=TTY::Prompt.new.ask("What is your name?")
-   logged_in=User.find_by(name: @@userInfo)
-     if !logged_in
-     "This user does not exist! Try again"
-     end
-     logged_in
+  logged_in=User.find_by(name: @@userInfo)
+  if !logged_in
+   "This user does not exist! Try again"
+  end
+   logged_in
  end
-
- 
 
 
 
