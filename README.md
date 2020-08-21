@@ -3,9 +3,7 @@
 My first project at Flatiron! I built this project using the Command Line Interface using OOP design. I used CRUD methods to interact with the user.
 
 
-## How to play--
-
-### Option One - Data Analytics Project
+### How to play--
 
 1. Clone repo to your local computer
 2. CD into file and hit code . or open up text editor of your choice and open the cloned folder.
