@@ -1,4 +1,5 @@
 class Superpower < ActiveRecord::Base
+    
     #macro that connects our ruby models to the db
     #A superpower can belong to many superheroes
     #and will be long to many organizations through superherofes
@@ -19,17 +20,13 @@ class Superpower < ActiveRecord::Base
     end
 
 
-    def find_by_id(id)
-        Superpower.all.select do |power|
-         if power.id==id
-          power.name
-         end
+     def find_by_id(id)
+     Superpower.all.select do |power|
+      if power.id==id
+         power.name
+       end
+      end
      end
-end
-
-
-
-
 
 end
 

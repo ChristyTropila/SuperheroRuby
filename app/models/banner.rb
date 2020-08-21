@@ -1,152 +1,91 @@
+
 class Banner
     def self.frame_one
         puts "          
-                                                                                
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMNNNNMMMMMMMMMMMMMNmMMMMMMMMMMMMMMMMMMMMMMMMMNmMMMMMMMMNNNNNMMMMMMMMMmysoshNMMMMMMMMMmysoshNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMhs+/-.`    .+NMMyo+/:-.` .MNo/-.````-/hMMMMyo+/:-.` .MNyo+:-``   `.sMMMMmo.      `oMMMMMmo.      `oMMMMmdhyso/yMmyso+/-:MMMMMMMM
-        MMMMMMMMMMMN`            dMh         +Mo           /NMd         +Mh            `MMN+           oMMN+`          oMMy       sN-      /MMMMMMMM
-        MMMMMMMMMMMh     `..    -NM-   .     yM-            sM-   .`    yM+     `.`    +Mh.            `Nd.            `NM:       hs       oMMMMMMMM
-        MMMMMMMMMMM+     dNy   :mMs    +     Nm     yhs`    /y    +     mM.    .NN/  `+Ny`     .+o:     o`     -+o:     mh     -  m`       hMMMMMMMM
-        MMMMMMMMMMM.    :h:  .sMMm`   -o    `Mo    -MMM+    o`   .o    `Nm     oy- `:hMh     .yMMMM-         `yMMMM-    N:    :- .+        mMMMMMMMM
-        MMMMMMMMMMm     `   .ohNM/    y:    -M.    yMMN.   :/    y:    -Ms     `   :sdm`    -mMMMMM+        -mMMMMM/   /y    `h` .` +     `MMMMMMMMM
-        MMMMMMMMMMs     ``.`   -y    -N`    :d    `NMm:   -s    .N.    :M:     ```    .    `mMMMMMM-       `mMMMMMM-  `d.    /d    -y     .MMMMMMMMM
-        MMMMMMMMMM:    +dmd:   ``    oy     ++    /Mh.  `/d`    oy     /N`    ydmh.        oMMMMMMs  `     oMMMMMMs  `y+    `ms    hh     :MMMMMMMMM
-        MMMMMMMMMN     sy+-   -.     `      o`    o/`  -hN:     `      +y    `hs/.  `+`    +MMMMNo` `y.    +MMMMNo` `yh`    +M/   -Mh     :MMMMMMMMM
-        MMMMMMMMMs          -y+     `.      -       `:hNMo     `.      o:         `:hM/     :oo/.  :dM/     :oo/.  -dN-    `mM.   yMh     /MMMMMMMMM
-        MMMMMMMMM-      `-+hNh     -mm`          ./smMMMh`    .mm`     +`      `:odMMMm.         -sNMMm.         .sNM/     oMm   .MMh    `/MMMMMMMMM
-        MMMMMMMMN:-::+oymNMMN:--:/+dMm:/+syd//oydNMMMMMN:--:/+hMN-/+sydy-::/+shmMMMMMMMm+.`  `-/yNMMMMMm+.`  `-/yNMMh::/+ooNMh   yMMmoyhdmNMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+        ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗     ██████╗ ███╗   ██╗███████╗    
+        ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝    ██╔═══██╗████╗  ██║██╔════╝    
+        ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗      ██║   ██║██╔██╗ ██║█████╗      
+        ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝      ██║   ██║██║╚██╗██║██╔══╝      
+        ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗    ╚██████╔╝██║ ╚████║███████╗    
+        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝    
+                                                                                                
+                                                    ██████╗ ██╗   ██╗                           
+                                                    ██╔══██╗╚██╗ ██╔╝██╗                        
+                                                    ██████╔╝ ╚████╔╝ ╚═╝                        
+                                                    ██╔══██╗  ╚██╔╝  ██╗                        
+                                                    ██████╔╝   ██║   ╚═╝                        
+                                                    ╚═════╝    ╚═╝             
 
-                             .syyyyyyyyyy+                          
-                          `yMMMMMMMMMMMMyy                          
-                          /MMMMNhhhhMMMMy/                            
-                          /MMMM/    ....`                            
-                          /MMMM:                                      
-                          /MMMM:                                         
-                          /MMMMy-..-yyyy+                              
-                          :MMMMMMMMMMMMMy/                             
-                           -yMMMMMMMMMMMy/                                
-                             `..........``   
+                           
+                  ██████╗
+                  ██╔════╝
+                  ██║     
+                  ██║     
+                  ╚██████╗
+                    ╚═════╝
+         
+ 
         ".colorize(:yello)
         sleep (0.09)
         system 'clear'
     end
     def self.frame_two
         puts " 
-
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMNNNNMMMMMMMMMMMMMNmMMMMMMMMMMMMMMMMMMMMMMMMMNmMMMMMMMMNNNNNMMMMMMMMMmysoshNMMMMMMMMMmysoshNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMhs+/-.`    .+NMMyo+/:-.` .MNo/-.````-/hMMMMyo+/:-.` .MNyo+:-``   `.sMMMMmo.      `oMMMMMmo.      `oMMMMmdhyso/yMmyso+/-:MMMMMMMM
-        MMMMMMMMMMMN`            dMh         +Mo           /NMd         +Mh            `MMN+           oMMN+`          oMMy       sN-      /MMMMMMMM
-        MMMMMMMMMMMh     `..    -NM-   .     yM-            sM-   .`    yM+     `.`    +Mh.            `Nd.            `NM:       hs       oMMMMMMMM
-        MMMMMMMMMMM+     dNy   :mMs    +     Nm     yhs`    /y    +     mM.    .NN/  `+Ny`     .+o:     o`     -+o:     mh     -  m`       hMMMMMMMM
-        MMMMMMMMMMM.    :h:  .sMMm`   -o    `Mo    -MMM+    o`   .o    `Nm     oy- `:hMh     .yMMMM-         `yMMMM-    N:    :- .+        mMMMMMMMM
-        MMMMMMMMMMm     `   .ohNM/    y:    -M.    yMMN.   :/    y:    -Ms     `   :sdm`    -mMMMMM+        -mMMMMM/   /y    `h` .` +     `MMMMMMMMM
-        MMMMMMMMMMs     ``.`   -y    -N`    :d    `NMm:   -s    .N.    :M:     ```    .    `mMMMMMM-       `mMMMMMM-  `d.    /d    -y     .MMMMMMMMM
-        MMMMMMMMMM:    +dmd:   ``    oy     ++    /Mh.  `/d`    oy     /N`    ydmh.        oMMMMMMs  `     oMMMMMMs  `y+    `ms    hh     :MMMMMMMMM
-        MMMMMMMMMN     sy+-   -.     `      o`    o/`  -hN:     `      +y    `hs/.  `+`    +MMMMNo` `y.    +MMMMNo` `yh`    +M/   -Mh     :MMMMMMMMM
-        MMMMMMMMMs          -y+     `.      -       `:hNMo     `.      o:         `:hM/     :oo/.  :dM/     :oo/.  -dN-    `mM.   yMh     /MMMMMMMMM
-        MMMMMMMMM-      `-+hNh     -mm`          ./smMMMh`    .mm`     +`      `:odMMMm.         -sNMMm.         .sNM/     oMm   .MMh    `/MMMMMMMMM
-        MMMMMMMMN:-::+oymNMMN:--:/+dMm:/+syd//oydNMMMMMN:--:/+hMN-/+sydy-::/+shmMMMMMMMm+.`  `-/yNMMMMMm+.`  `-/yNMMh::/+ooNMh   yMMmoyhdmNMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+        ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗     ██████╗ ███╗   ██╗███████╗    
+        ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝    ██╔═══██╗████╗  ██║██╔════╝    
+        ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗      ██║   ██║██╔██╗ ██║█████╗      
+        ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝      ██║   ██║██║╚██╗██║██╔══╝      
+        ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗    ╚██████╔╝██║ ╚████║███████╗    
+        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝    
+                                                                                                
+                                                    ██████╗ ██╗   ██╗                           
+                                                    ██╔══██╗╚██╗ ██╔╝██╗                        
+                                                    ██████╔╝ ╚████╔╝ ╚═╝                        
+                                                    ██╔══██╗  ╚██╔╝  ██╗                        
+                                                    ██████╔╝   ██║   ╚═╝                        
+                                                    ╚═════╝    ╚═╝           
+       
                             
-                             .syyyyyyyyyy+-yyyy-   Myyyy                         
-                          `yMMMMMMMMMMMMy/MMMM:    MMMMy                         
-                          /MMMMNhhhhMMMMy/MMMM:    MMMMy                            
-                          /MMMM/    ....`/MMMMyooooMMMMy                           
-                          /MMMM:         /MMMMMMMMMMMMMy                            
-                          /MMMM:         /MMMMmmmmmMMMMy                              
-                          /MMMMy-..-yyyy+/MMMM:    MMMMy                               
-                          :MMMMMMMMMMMMMy/MMMM:    MMMMy                                 
-                           -yMMMMMMMMMMMy/MMMM:    MMMMy                                
-                             `..........``....`    ....`     
-
+                                                
+                              ██████╗██╗  ██╗
+                              ██╔════╝██║  ██║
+                              ██║     ███████║
+                              ██║     ██╔══██║
+                              ╚██████╗██║  ██║
+                                ╚═════╝╚═╝  ╚═╝
+                                              
+ 
 
         ".colorize(:red)
         sleep (0.09)
         system 'clear'
     end
     def self.frame_three
-        puts "                                                                             
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMNNNNMMMMMMMMMMMMMNmMMMMMMMMMMMMMMMMMMMMMMMMMNmMMMMMMMMNNNNNMMMMMMMMMmysoshNMMMMMMMMMmysoshNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMhs+/-.`    .+NMMyo+/:-.` .MNo/-.````-/hMMMMyo+/:-.` .MNyo+:-``   `.sMMMMmo.      `oMMMMMmo.      `oMMMMmdhyso/yMmyso+/-:MMMMMMMM
-        MMMMMMMMMMMN`            dMh         +Mo           /NMd         +Mh            `MMN+           oMMN+`          oMMy       sN-      /MMMMMMMM
-        MMMMMMMMMMMh     `..    -NM-   .     yM-            sM-   .`    yM+     `.`    +Mh.            `Nd.            `NM:       hs       oMMMMMMMM
-        MMMMMMMMMMM+     dNy   :mMs    +     Nm     yhs`    /y    +     mM.    .NN/  `+Ny`     .+o:     o`     -+o:     mh     -  m`       hMMMMMMMM
-        MMMMMMMMMMM.    :h:  .sMMm`   -o    `Mo    -MMM+    o`   .o    `Nm     oy- `:hMh     .yMMMM-         `yMMMM-    N:    :- .+        mMMMMMMMM
-        MMMMMMMMMMm     `   .ohNM/    y:    -M.    yMMN.   :/    y:    -Ms     `   :sdm`    -mMMMMM+        -mMMMMM/   /y    `h` .` +     `MMMMMMMMM
-        MMMMMMMMMMs     ``.`   -y    -N`    :d    `NMm:   -s    .N.    :M:     ```    .    `mMMMMMM-       `mMMMMMM-  `d.    /d    -y     .MMMMMMMMM
-        MMMMMMMMMM:    +dmd:   ``    oy     ++    /Mh.  `/d`    oy     /N`    ydmh.        oMMMMMMs  `     oMMMMMMs  `y+    `ms    hh     :MMMMMMMMM
-        MMMMMMMMMN     sy+-   -.     `      o`    o/`  -hN:     `      +y    `hs/.  `+`    +MMMMNo` `y.    +MMMMNo` `yh`    +M/   -Mh     :MMMMMMMMM
-        MMMMMMMMMs          -y+     `.      -       `:hNMo     `.      o:         `:hM/     :oo/.  :dM/     :oo/.  -dN-    `mM.   yMh     /MMMMMMMMM
-        MMMMMMMMM-      `-+hNh     -mm`          ./smMMMh`    .mm`     +`      `:odMMMm.         -sNMMm.         .sNM/     oMm   .MMh    `/MMMMMMMMM
-        MMMMMMMMN:-::+oymNMMN:--:/+dMm:/+syd//oydNMMMMMN:--:/+hMN-/+sydy-::/+shmMMMMMMMm+.`  `-/yNMMMMMm+.`  `-/yNMMh::/+ooNMh   yMMmoyhdmNMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+        puts "     
+        ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗     ██████╗ ███╗   ██╗███████╗    
+        ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝    ██╔═══██╗████╗  ██║██╔════╝    
+        ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗      ██║   ██║██╔██╗ ██║█████╗      
+        ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝      ██║   ██║██║╚██╗██║██╔══╝      
+        ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗    ╚██████╔╝██║ ╚████║███████╗    
+        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝    
+                                                                                                
+                                                    ██████╗ ██╗   ██╗                           
+                                                    ██╔══██╗╚██╗ ██╔╝██╗                        
+                                                    ██████╔╝ ╚████╔╝ ╚═╝                        
+                                                    ██╔══██╗  ╚██╔╝  ██╗                        
+                                                    ██████╔╝   ██║   ╚═╝                        
+                                                    ╚═════╝    ╚═╝            
+        
 
-
-                            .syyyyyyyyyy+-yyyy-    yyyy+-yyyyyyyyyyyo`                            
-                          `yMMMMMMMMMMMMy/MMMM:    MMMMy/MMMMMMMMMMMMN                           
-                          /MMMMNhhhhMMMMy/MMMM:    MMMMy/MMMM+---:MMMMy                             
-                          /MMMM/    ....`/MMMMyooooMMMMy/MMMM:   `MMMMy                        
-                          /MMMM:         /MMMMMMMMMMMMMy/MMMMMMMMMMMMN+                                
-                          /MMMM:         /MMMMmmmmmMMMMy/MMMMmmNMMMMd`                              
-                          /MMMMy-..-yyyy+/MMMM:    MMMMy/MMMM: `oNMMMd                               
-                          :MMMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:   `MMMMy                               
-                           -yMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:    MMMMy                                   
-                             `..........``....`    ....``....`    ....`   
+                                                              
+                                          ██████╗██╗  ██╗██████╗ 
+                                          ██╔════╝██║  ██║██╔══██╗
+                                          ██║     ███████║██████╔╝
+                                          ██║     ██╔══██║██╔══██╗
+                                          ╚██████╗██║  ██║██║  ██║
+                                            ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝
+                         
+   
         ".colorize(:blue)
         sleep (0.09)
         system 'clear'
@@ -154,51 +93,31 @@ class Banner
     end
 
     def self.frame_four
-        puts "                                                                             
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMNNNNMMMMMMMMMMMMMNmMMMMMMMMMMMMMMMMMMMMMMMMMNmMMMMMMMMNNNNNMMMMMMMMMmysoshNMMMMMMMMMmysoshNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMhs+/-.`    .+NMMyo+/:-.` .MNo/-.````-/hMMMMyo+/:-.` .MNyo+:-``   `.sMMMMmo.      `oMMMMMmo.      `oMMMMmdhyso/yMmyso+/-:MMMMMMMM
-        MMMMMMMMMMMN`            dMh         +Mo           /NMd         +Mh            `MMN+           oMMN+`          oMMy       sN-      /MMMMMMMM
-        MMMMMMMMMMMh     `..    -NM-   .     yM-            sM-   .`    yM+     `.`    +Mh.            `Nd.            `NM:       hs       oMMMMMMMM
-        MMMMMMMMMMM+     dNy   :mMs    +     Nm     yhs`    /y    +     mM.    .NN/  `+Ny`     .+o:     o`     -+o:     mh     -  m`       hMMMMMMMM
-        MMMMMMMMMMM.    :h:  .sMMm`   -o    `Mo    -MMM+    o`   .o    `Nm     oy- `:hMh     .yMMMM-         `yMMMM-    N:    :- .+        mMMMMMMMM
-        MMMMMMMMMMm     `   .ohNM/    y:    -M.    yMMN.   :/    y:    -Ms     `   :sdm`    -mMMMMM+        -mMMMMM/   /y    `h` .` +     `MMMMMMMMM
-        MMMMMMMMMMs     ``.`   -y    -N`    :d    `NMm:   -s    .N.    :M:     ```    .    `mMMMMMM-       `mMMMMMM-  `d.    /d    -y     .MMMMMMMMM
-        MMMMMMMMMM:    +dmd:   ``    oy     ++    /Mh.  `/d`    oy     /N`    ydmh.        oMMMMMMs  `     oMMMMMMs  `y+    `ms    hh     :MMMMMMMMM
-        MMMMMMMMMN     sy+-   -.     `      o`    o/`  -hN:     `      +y    `hs/.  `+`    +MMMMNo` `y.    +MMMMNo` `yh`    +M/   -Mh     :MMMMMMMMM
-        MMMMMMMMMs          -y+     `.      -       `:hNMo     `.      o:         `:hM/     :oo/.  :dM/     :oo/.  -dN-    `mM.   yMh     /MMMMMMMMM
-        MMMMMMMMM-      `-+hNh     -mm`          ./smMMMh`    .mm`     +`      `:odMMMm.         -sNMMm.         .sNM/     oMm   .MMh    `/MMMMMMMMM
-        MMMMMMMMN:-::+oymNMMN:--:/+dMm:/+syd//oydNMMMMMN:--:/+hMN-/+sydy-::/+shmMMMMMMMm+.`  `-/yNMMMMMm+.`  `-/yNMMh::/+ooNMh   yMMmoyhdmNMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+        puts "  
+        ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗     ██████╗ ███╗   ██╗███████╗    
+        ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝    ██╔═══██╗████╗  ██║██╔════╝    
+        ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗      ██║   ██║██╔██╗ ██║█████╗      
+        ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝      ██║   ██║██║╚██╗██║██╔══╝      
+        ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗    ╚██████╔╝██║ ╚████║███████╗    
+        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝    
+                                                                                                
+                                                    ██████╗ ██╗   ██╗                           
+                                                    ██╔══██╗╚██╗ ██╔╝██╗                        
+                                                    ██████╔╝ ╚████╔╝ ╚═╝                        
+                                                    ██╔══██╗  ╚██╔╝  ██╗                        
+                                                    ██████╔╝   ██║   ╚═╝                        
+                                                    ╚═════╝    ╚═╝             
 
 
-                            .syyyyyyyyyy+-yyyy-    yyyy+-yyyyyyyyyyyo` -yyyy-                           
-                          `yMMMMMMMMMMMMy/MMMM:    MMMMy/MMMMMMMMMMMMN+/MMMM:                         
-                          /MMMMNhhhhMMMMy/MMMM:    MMMMy/MMMM+---:MMMMy/MMMM:                  
-                          /MMMM/    ....`/MMMMyooooMMMMy/MMMM:   `MMMMy/MMMM:                              
-                          /MMMM:         /MMMMMMMMMMMMMy/MMMMMMMMMMMMN+/MMMM:                                
-                          /MMMM:         /MMMMmmmmmMMMMy/MMMMmmNMMMMd` /MMMM:                        
-                          /MMMMy-..-yyyy+/MMMM:    MMMMy/MMMM: `oNMMMd:/MMMM:                                 
-                          :MMMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:   `MMMMy/MMMM:                              
-                           -yMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:    MMMMy/MMMM:                                    
-                             `..........``....`    ....``....`    ....``....`    
+                                                                    
+                                                ██████╗██╗  ██╗██████╗ ██╗
+                                                ██╔════╝██║  ██║██╔══██╗██║
+                                                ██║     ███████║██████╔╝██║
+                                                ██║     ██╔══██║██╔══██╗██║
+                                                ╚██████╗██║  ██║██║  ██║██║
+                                                  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝
+                                                                            
+    
         ".colorize(:yellow)
         sleep (0.09)
         system 'clear'
@@ -207,51 +126,30 @@ class Banner
 
 
     def self.frame_five
-        puts "                                                                             
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMNNNNMMMMMMMMMMMMMNmMMMMMMMMMMMMMMMMMMMMMMMMMNmMMMMMMMMNNNNNMMMMMMMMMmysoshNMMMMMMMMMmysoshNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMhs+/-.`    .+NMMyo+/:-.` .MNo/-.````-/hMMMMyo+/:-.` .MNyo+:-``   `.sMMMMmo.      `oMMMMMmo.      `oMMMMmdhyso/yMmyso+/-:MMMMMMMM
-        MMMMMMMMMMMN`            dMh         +Mo           /NMd         +Mh            `MMN+           oMMN+`          oMMy       sN-      /MMMMMMMM
-        MMMMMMMMMMMh     `..    -NM-   .     yM-            sM-   .`    yM+     `.`    +Mh.            `Nd.            `NM:       hs       oMMMMMMMM
-        MMMMMMMMMMM+     dNy   :mMs    +     Nm     yhs`    /y    +     mM.    .NN/  `+Ny`     .+o:     o`     -+o:     mh     -  m`       hMMMMMMMM
-        MMMMMMMMMMM.    :h:  .sMMm`   -o    `Mo    -MMM+    o`   .o    `Nm     oy- `:hMh     .yMMMM-         `yMMMM-    N:    :- .+        mMMMMMMMM
-        MMMMMMMMMMm     `   .ohNM/    y:    -M.    yMMN.   :/    y:    -Ms     `   :sdm`    -mMMMMM+        -mMMMMM/   /y    `h` .` +     `MMMMMMMMM
-        MMMMMMMMMMs     ``.`   -y    -N`    :d    `NMm:   -s    .N.    :M:     ```    .    `mMMMMMM-       `mMMMMMM-  `d.    /d    -y     .MMMMMMMMM
-        MMMMMMMMMM:    +dmd:   ``    oy     ++    /Mh.  `/d`    oy     /N`    ydmh.        oMMMMMMs  `     oMMMMMMs  `y+    `ms    hh     :MMMMMMMMM
-        MMMMMMMMMN     sy+-   -.     `      o`    o/`  -hN:     `      +y    `hs/.  `+`    +MMMMNo` `y.    +MMMMNo` `yh`    +M/   -Mh     :MMMMMMMMM
-        MMMMMMMMMs          -y+     `.      -       `:hNMo     `.      o:         `:hM/     :oo/.  :dM/     :oo/.  -dN-    `mM.   yMh     /MMMMMMMMM
-        MMMMMMMMM-      `-+hNh     -mm`          ./smMMMh`    .mm`     +`      `:odMMMm.         -sNMMm.         .sNM/     oMm   .MMh    `/MMMMMMMMM
-        MMMMMMMMN:-::+oymNMMN:--:/+dMm:/+syd//oydNMMMMMN:--:/+hMN-/+sydy-::/+shmMMMMMMMm+.`  `-/yNMMMMMm+.`  `-/yNMMh::/+ooNMh   yMMmoyhdmNMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+        puts "                    
+        ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗     ██████╗ ███╗   ██╗███████╗    
+        ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝    ██╔═══██╗████╗  ██║██╔════╝    
+        ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗      ██║   ██║██╔██╗ ██║█████╗      
+        ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝      ██║   ██║██║╚██╗██║██╔══╝      
+        ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗    ╚██████╔╝██║ ╚████║███████╗    
+        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝    
+                                                                                                
+                                                    ██████╗ ██╗   ██╗                           
+                                                    ██╔══██╗╚██╗ ██╔╝██╗                        
+                                                    ██████╔╝ ╚████╔╝ ╚═╝                        
+                                                    ██╔══██╗  ╚██╔╝  ██╗                        
+                                                    ██████╔╝   ██║   ╚═╝                        
+                                                    ╚═════╝    ╚═╝               
 
 
-                            .syyyyyyyyyy+-yyyy-    yyyy+-yyyyyyyyyyyo` -yyyy- :syyyyyyyyyyy                       
-                          `yMMMMMMMMMMMMy/MMMM:    MMMMy/MMMMMMMMMMMMN+/MMMM:sMMMMMMMMMMMMM                      
-                          /MMMMNhhhhMMMMy/MMMM:    MMMMy/MMMM+---:MMMMy/MMMM:yMMMMhhhhdMMMM                            
-                          /MMMM/    ....`/MMMMyooooMMMMy/MMMM:   `MMMMy/MMMM:yMMMMoooooss/.`                                 
-                          /MMMM:         /MMMMMMMMMMMMMy/MMMMMMMMMMMMN+/MMMM:yMMMMMMMMMMMMh.                                  
-                          /MMMM:         /MMMMmmmmmMMMMy/MMMMmmNMMMMd` /MMMM:`odmmmmmmNMMMM:                                  
-                          /MMMMy-..-yyyy+/MMMM:    MMMMy/MMMM: `oNMMMd:/MMMM:+yyyy-..-oMMMM:                                  
-                          :MMMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:   `MMMMy/MMMM:yMMMMMMMMMMMMM:                                     
-                           -yMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:    MMMMy/MMMM:yMMMMMMMMMMMMs`                                       
-                             `..........``....`    ....``....`    ....``....``...........`       
+                                                        ██████╗██╗  ██╗██████╗ ██╗███████╗
+                                                        ██╔════╝██║  ██║██╔══██╗██║██╔════╝
+                                                        ██║     ███████║██████╔╝██║███████╗
+                                                        ██║     ██╔══██║██╔══██╗██║╚════██║
+                                                        ╚██████╗██║  ██║██║  ██║██║███████║
+                                                        ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
+                                                                                       
+                                                          
       ".colorize(:red)
       sleep (0.09)
       system 'clear'
@@ -260,51 +158,31 @@ class Banner
 
 
     def self.frame_six
-        puts "                                                                             
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMNNNNMMMMMMMMMMMMMNmMMMMMMMMMMMMMMMMMMMMMMMMMNmMMMMMMMMNNNNNMMMMMMMMMmysoshNMMMMMMMMMmysoshNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMhs+/-.`    .+NMMyo+/:-.` .MNo/-.````-/hMMMMyo+/:-.` .MNyo+:-``   `.sMMMMmo.      `oMMMMMmo.      `oMMMMmdhyso/yMmyso+/-:MMMMMMMM
-        MMMMMMMMMMMN`            dMh         +Mo           /NMd         +Mh            `MMN+           oMMN+`          oMMy       sN-      /MMMMMMMM
-        MMMMMMMMMMMh     `..    -NM-   .     yM-            sM-   .`    yM+     `.`    +Mh.            `Nd.            `NM:       hs       oMMMMMMMM
-        MMMMMMMMMMM+     dNy   :mMs    +     Nm     yhs`    /y    +     mM.    .NN/  `+Ny`     .+o:     o`     -+o:     mh     -  m`       hMMMMMMMM
-        MMMMMMMMMMM.    :h:  .sMMm`   -o    `Mo    -MMM+    o`   .o    `Nm     oy- `:hMh     .yMMMM-         `yMMMM-    N:    :- .+        mMMMMMMMM
-        MMMMMMMMMMm     `   .ohNM/    y:    -M.    yMMN.   :/    y:    -Ms     `   :sdm`    -mMMMMM+        -mMMMMM/   /y    `h` .` +     `MMMMMMMMM
-        MMMMMMMMMMs     ``.`   -y    -N`    :d    `NMm:   -s    .N.    :M:     ```    .    `mMMMMMM-       `mMMMMMM-  `d.    /d    -y     .MMMMMMMMM
-        MMMMMMMMMM:    +dmd:   ``    oy     ++    /Mh.  `/d`    oy     /N`    ydmh.        oMMMMMMs  `     oMMMMMMs  `y+    `ms    hh     :MMMMMMMMM
-        MMMMMMMMMN     sy+-   -.     `      o`    o/`  -hN:     `      +y    `hs/.  `+`    +MMMMNo` `y.    +MMMMNo` `yh`    +M/   -Mh     :MMMMMMMMM
-        MMMMMMMMMs          -y+     `.      -       `:hNMo     `.      o:         `:hM/     :oo/.  :dM/     :oo/.  -dN-    `mM.   yMh     /MMMMMMMMM
-        MMMMMMMMM-      `-+hNh     -mm`          ./smMMMh`    .mm`     +`      `:odMMMm.         -sNMMm.         .sNM/     oMm   .MMh    `/MMMMMMMMM
-        MMMMMMMMN:-::+oymNMMN:--:/+dMm:/+syd//oydNMMMMMN:--:/+hMN-/+sydy-::/+shmMMMMMMMm+.`  `-/yNMMMMMm+.`  `-/yNMMh::/+ooNMh   yMMmoyhdmNMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+        puts "    
+        ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗     ██████╗ ███╗   ██╗███████╗    
+        ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝    ██╔═══██╗████╗  ██║██╔════╝    
+        ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗      ██║   ██║██╔██╗ ██║█████╗      
+        ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝      ██║   ██║██║╚██╗██║██╔══╝      
+        ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗    ╚██████╔╝██║ ╚████║███████╗    
+        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝    
+                                                                                                
+                                                    ██████╗ ██╗   ██╗                           
+                                                    ██╔══██╗╚██╗ ██╔╝██╗                        
+                                                    ██████╔╝ ╚████╔╝ ╚═╝                        
+                                                    ██╔══██╗  ╚██╔╝  ██╗                        
+                                                    ██████╔╝   ██║   ╚═╝                        
+                                                    ╚═════╝    ╚═╝           
 
 
-                            .syyyyyyyyyy+-yyyy-    yyyy+-yyyyyyyyyyyo` -yyyy- :syyyyyyyyyyy-+yyyyyyyyyyyyy-                           
-                          `yMMMMMMMMMMMMy/MMMM:    MMMMy/MMMMMMMMMMMMN+/MMMM:sMMMMMMMMMMMMM:yMMMMMMMMMMMMM/                         
-                          /MMMMNhhhhMMMMy/MMMM:    MMMMy/MMMM+---:MMMMy/MMMM:yMMMMhhhhdMMMM:+hhhhMMMMmhhhh-                           
-                          /MMMM/    ....`/MMMMyooooMMMMy/MMMM:   `MMMMy/MMMM:yMMMMoooooss/.`     MMMMy                                      
-                          /MMMM:         /MMMMMMMMMMMMMy/MMMMMMMMMMMMN+/MMMM:yMMMMMMMMMMMMh.     MMMMy                                        
-                          /MMMM:         /MMMMmmmmmMMMMy/MMMMmmNMMMMd` /MMMM:`odmmmmmmNMMMM:     MMMMy                                 
-                          /MMMMy-..-yyyy+/MMMM:    MMMMy/MMMM: `oNMMMd:/MMMM:+yyyy-..-oMMMM:     MMMMy                                       
-                          :MMMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:   `MMMMy/MMMM:yMMMMMMMMMMMMM:     MMMMy                                         
-                           -yMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:    MMMMy/MMMM:yMMMMMMMMMMMMs`     MMMMy                                     
-                             `..........``....`    ....``....`    ....``....``...........`       ....`           
+                                                                                
+                                                              ██████╗██╗  ██╗██████╗ ██╗███████╗████████╗
+                                                              ██╔════╝██║  ██║██╔══██╗██║██╔════╝╚══██╔══╝
+                                                              ██║     ███████║██████╔╝██║███████╗   ██║   
+                                                              ██║     ██╔══██║██╔══██╗██║╚════██║   ██║   
+                                                              ╚██████╗██║  ██║██║  ██║██║███████║   ██║   
+                                                                ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝   ╚═╝   
+                                                                                                          
+         
         ".colorize(:blue)
         sleep (0.09)
         system 'clear'
@@ -312,52 +190,31 @@ class Banner
     end
 
     def self.frame_seven
-        puts "                                                                             
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMNNNNMMMMMMMMMMMMMNmMMMMMMMMMMMMMMMMMMMMMMMMMNmMMMMMMMMNNNNNMMMMMMMMMmysoshNMMMMMMMMMmysoshNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMhs+/-.`    .+NMMyo+/:-.` .MNo/-.````-/hMMMMyo+/:-.` .MNyo+:-``   `.sMMMMmo.      `oMMMMMmo.      `oMMMMmdhyso/yMmyso+/-:MMMMMMMM
-        MMMMMMMMMMMN`            dMh         +Mo           /NMd         +Mh            `MMN+           oMMN+`          oMMy       sN-      /MMMMMMMM
-        MMMMMMMMMMMh     `..    -NM-   .     yM-            sM-   .`    yM+     `.`    +Mh.            `Nd.            `NM:       hs       oMMMMMMMM
-        MMMMMMMMMMM+     dNy   :mMs    +     Nm     yhs`    /y    +     mM.    .NN/  `+Ny`     .+o:     o`     -+o:     mh     -  m`       hMMMMMMMM
-        MMMMMMMMMMM.    :h:  .sMMm`   -o    `Mo    -MMM+    o`   .o    `Nm     oy- `:hMh     .yMMMM-         `yMMMM-    N:    :- .+        mMMMMMMMM
-        MMMMMMMMMMm     `   .ohNM/    y:    -M.    yMMN.   :/    y:    -Ms     `   :sdm`    -mMMMMM+        -mMMMMM/   /y    `h` .` +     `MMMMMMMMM
-        MMMMMMMMMMs     ``.`   -y    -N`    :d    `NMm:   -s    .N.    :M:     ```    .    `mMMMMMM-       `mMMMMMM-  `d.    /d    -y     .MMMMMMMMM
-        MMMMMMMMMM:    +dmd:   ``    oy     ++    /Mh.  `/d`    oy     /N`    ydmh.        oMMMMMMs  `     oMMMMMMs  `y+    `ms    hh     :MMMMMMMMM
-        MMMMMMMMMN     sy+-   -.     `      o`    o/`  -hN:     `      +y    `hs/.  `+`    +MMMMNo` `y.    +MMMMNo` `yh`    +M/   -Mh     :MMMMMMMMM
-        MMMMMMMMMs          -y+     `.      -       `:hNMo     `.      o:         `:hM/     :oo/.  :dM/     :oo/.  -dN-    `mM.   yMh     /MMMMMMMMM
-        MMMMMMMMM-      `-+hNh     -mm`          ./smMMMh`    .mm`     +`      `:odMMMm.         -sNMMm.         .sNM/     oMm   .MMh    `/MMMMMMMMM
-        MMMMMMMMN:-::+oymNMMN:--:/+dMm:/+syd//oydNMMMMMN:--:/+hMN-/+sydy-::/+shmMMMMMMMm+.`  `-/yNMMMMMm+.`  `-/yNMMh::/+ooNMh   yMMmoyhdmNMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNmdmmNMMMMMMMMMMNmdmmNMMMMMMNMMMMMMMdssyNMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+        puts "        
+        ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗     ██████╗ ███╗   ██╗███████╗    
+        ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝    ██╔═══██╗████╗  ██║██╔════╝    
+        ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗      ██║   ██║██╔██╗ ██║█████╗      
+        ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝      ██║   ██║██║╚██╗██║██╔══╝      
+        ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗    ╚██████╔╝██║ ╚████║███████╗    
+        ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝    
+                                                                                                
+                                                    ██████╗ ██╗   ██╗                           
+                                                    ██╔══██╗╚██╗ ██╔╝██╗                        
+                                                    ██████╔╝ ╚████╔╝ ╚═╝                        
+                                                    ██╔══██╗  ╚██╔╝  ██╗                        
+                                                    ██████╔╝   ██║   ╚═╝                        
+                                                    ╚═════╝    ╚═╝            
 
 
-                 
-                            .syyyyyyyyyy+-yyyy-    yyyy+-yyyyyyyyyyyo` -yyyy- :syyyyyyyyyyy-+yyyyyyyyyyyyy--yyyy-   +yyys`                            
-                          `yMMMMMMMMMMMMy/MMMM:    MMMMy/MMMMMMMMMMMMN+/MMMM:sMMMMMMMMMMMMM:yMMMMMMMMMMMMM/ sMMMN- oMMMN-                             
-                          /MMMMNhhhhMMMMy/MMMM:    MMMMy/MMMM+---:MMMMy/MMMM:yMMMMhhhhdMMMM:+hhhhMMMMmhhhh-  sMMMNyMMMN-                              
-                          /MMMM/    ....`/MMMMyooooMMMMy/MMMM:   `MMMMy/MMMM:yMMMMoooooss/.`     MMMMy        oMMMMMMN-                               
-                          /MMMM:         /MMMMMMMMMMMMMy/MMMMMMMMMMMMN+/MMMM:yMMMMMMMMMMMMh.     MMMMy         oMMMMN-                                
-                          /MMMM:         /MMMMmmmmmMMMMy/MMMMmmNMMMMd` /MMMM:`odmmmmmmNMMMM:     MMMMy         sMMMN.                                 
-                          /MMMMy-..-yyyy+/MMMM:    MMMMy/MMMM: `oNMMMd:/MMMM:+yyyy-..-oMMMM:     MMMMy        sMMMN.                                  
-                          :MMMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:   `MMMMy/MMMM:yMMMMMMMMMMMMM:     MMMMy       sMMMN.                                   
-                           -yMMMMMMMMMMMy/MMMM:    MMMMy/MMMM:    MMMMy/MMMM:yMMMMMMMMMMMMs`     MMMMy      sMMMN.                                    
-                             `..........``....`    ....``....`    ....``....``...........`       ....`      ....`     
+                                                                                    
+                                                                        ██████╗██╗  ██╗██████╗ ██╗███████╗████████╗██╗   ██╗
+                                                                        ██╔════╝██║  ██║██╔══██╗██║██╔════╝╚══██╔══╝╚██╗ ██╔╝
+                                                                        ██║     ███████║██████╔╝██║███████╗   ██║    ╚████╔╝ 
+                                                                        ██║     ██╔══██║██╔══██╗██║╚════██║   ██║     ╚██╔╝  
+                                                                        ╚██████╗██║  ██║██║  ██║██║███████║   ██║      ██║   
+                                                                          ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝   ╚═╝      ╚═╝   
+                                                                                                                              
+    
         ".colorize(:red)
         sleep (0.09)
         system 'clear'
@@ -367,7 +224,7 @@ class Banner
 
     
 def self.animation
-    4.times do
+    3.times do
         Banner.frame_one
         Banner.frame_two
         Banner.frame_three
