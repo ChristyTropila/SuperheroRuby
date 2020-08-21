@@ -84,7 +84,6 @@ class Interface
          user.reload
 
 puts"  
-
 ███████╗██╗   ██╗██████╗ ███████╗██████╗ ██╗  ██╗███████╗██████╗  ██████╗ ███████╗██╗██╗██╗██╗
 ██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗██║  ██║██╔════╝██╔══██╗██╔═══██╗██╔════╝██║██║██║██║
 ███████╗██║   ██║██████╔╝█████╗  ██████╔╝███████║█████╗  ██████╔╝██║   ██║███████╗██║██║██║██║
@@ -172,7 +171,6 @@ puts"
                ██║   ██║  ██║███████╗    ██║  ██║███████╗██║  ██║╚██████╔╝███████║
                ╚═╝   ╚═╝  ╚═╝╚══════╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
                                                                       
-
         ".colorize(:yellow)
         choosen_superhero=prompt.select("Choose A Superhero Please", choices )
         userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
@@ -201,7 +199,6 @@ puts"
                ██║     ╚██████╔╝╚███╔███╔╝███████╗██║  ██║███████║
                ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚══════╝
                                                    
-
         ".colorize(:yellow)
         choices=self.user.superheros.all_names
         super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
