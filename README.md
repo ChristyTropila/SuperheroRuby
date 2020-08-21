@@ -3,6 +3,13 @@
 My first project at Flatiron! I built this project using the Command Line Interface using OOP design. I used CRUD methods to interact with the user.
 
 
+### User Stories
+
+* As a user, I want to be able to enter my name to retrieve my records
+* As a user, I want to be able to create one or more Superheros
+* As a user, I should be able to assign Superheros superpowers and organizations
+* As a user, I want to be able to edit or delete my choices
+
 ### How to play--
 
 1. Clone repo to your local computer
@@ -14,15 +21,6 @@ My first project at Flatiron! I built this project using the Command Line Interf
 7. rake db:start    -will run the program
 8. Follow the prompts and enjoy a simple game on the CLI!
 
-
-
-### User Stories
-
-
-* As a user, I want to be able to enter my name to retrieve my records
-* As a user, I want to be able to create one or more Superheros
-* As a user, I should be able to assign Superheros superpowers and organizations
-* As a user, I want to be able to edit or delete my choices
 
 ## Technology Stack Used
 1) Visual Studio Code
