@@ -35,9 +35,6 @@ fearless_ant=Superhero.create(name: "The Fearless Ant")
 confident_ox=Superhero.create(name: "The Confident Ox")
 
 
-#users
-user1=User.create(name: "Christy")
-user2=User.create(name: "Joby")
 
 #UserSuperheros
 
