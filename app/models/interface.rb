@@ -4,10 +4,9 @@ class Interface
   attr_reader :prompt
   attr_accessor :user, :superpower, :superhero, :heroman, :banner
   
-
    
    def initialize
-      @prompt = TTY::Prompt.new(symbols: {markers: "*"})
+      @prompt = TTY::Prompt.new
    end
 
    #This menu will first be displayed when a user runs rake :start
@@ -23,9 +22,9 @@ class Interface
   #####   ####  # #    #       #    #    # ######    #        ####  #    # ###    ######   ####  # ###### #####      #####   ####  #    # ######    #     # ###### #    #  ####   ####  ### 
                                                                                                                                                                                                                                                                                                                                    
     ".colorize(:blue)
-        user_inpupt=prompt.select("\nWelcome to the Game of Superheros.") do |menu|
-          menu.choice "\n\nRegister an Account", -> {register_user_helper}
-          menu.choice "\nLog Into Existing Account", -> {user_login_helper}
+        user_inpupt=prompt.select("\n\n---Welcome to the Game of Superheros.") do |menu|
+          menu.choice "------Register an Account", -> {register_user_helper}
+          menu.choice "------Log Into Existing Account", -> {user_login_helper}
        
         end
 
@@ -95,14 +94,14 @@ puts"
                                                                                               
 ".colorize(:blue)
 
-         puts "\n\nWELCOME, #{self.user.name}!!".bold
-         prompt.select("\nWhat would you like to do?") do |menu|
-          menu.choice "\n\n\nView Your Superheros", -> {display_user_superheros}
-          menu.choice "\nCreate A Superhero", -> {display_and_add_a_superhero}
-          menu.choice "\nGive Your Superhero A Superpower/Edit", ->{display_and_add_superpower}
-          menu.choice "\nAdd Your Superhero To An Organization/Edit", ->{display_and_add_orgs}
-          menu.choice "\nDelete A Superheros From Your List", -> {remove_superhero}
-          menu.choice "\nExit And Log Out", -> {user_log_out}
+         puts "\n\n\n---Welcome, #{self.user.name}!\n********************************************************************************************"
+         prompt.select("\n\n\n\n---What would you like to do?") do |menu|
+          menu.choice "\n\n---1) View Your Superheros", -> {display_user_superheros}
+          menu.choice "\n---2) Create A Superhero", -> {display_and_add_a_superhero}
+          menu.choice "\n---3) Give Your Superhero A Superpower/Edit", ->{display_and_add_superpower}
+          menu.choice "\n---4) Add Your Superhero To An Organization/Edit", ->{display_and_add_orgs}
+          menu.choice "\n---5) Delete A Superheros From Your List", -> {remove_superhero}
+          menu.choice "\n---6) Exit And Log Out", -> {user_log_out}
          end
          
          
@@ -114,9 +113,19 @@ puts"
       user.reload
       system 'clear'
       HeroMan.go
-      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      puts "\n"
-      puts "          ~~~~~~~~~~~~ You currently have #{self.user.superheros.count} Superheros ~~~~~~~~~~~~"
+      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+      puts " 
+██╗   ██╗ ██████╗ ██╗   ██╗██████╗     ███████╗██╗   ██╗██████╗ ███████╗██████╗ ██╗  ██╗███████╗██████╗  ██████╗ ███████╗
+╚██╗ ██╔╝██╔═══██╗██║   ██║██╔══██╗    ██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗██║  ██║██╔════╝██╔══██╗██╔═══██╗██╔════╝
+ ╚████╔╝ ██║   ██║██║   ██║██████╔╝    ███████╗██║   ██║██████╔╝█████╗  ██████╔╝███████║█████╗  ██████╔╝██║   ██║███████╗
+  ╚██╔╝  ██║   ██║██║   ██║██╔══██╗    ╚════██║██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗██╔══██║██╔══╝  ██╔══██╗██║   ██║╚════██║
+   ██║   ╚██████╔╝╚██████╔╝██║  ██║    ███████║╚██████╔╝██║     ███████╗██║  ██║██║  ██║███████╗██║  ██║╚██████╔╝███████║
+   ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+                                                                                                                         
+      ".colorize(:yellow)
+    
+      puts " \n\n\n      ~~~~~~~~~~~~ You currently have #{self.user.superheros.count} Superheros ~~~~~~~~~~~~"
       puts "\n"
       puts self.user.superheros.all_names_and_descrip
       sleep 7
@@ -153,7 +162,18 @@ puts"
         system 'clear'
         choices=iterator_heros
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        puts "\n"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "
+                  
+            ████████╗██╗  ██╗███████╗    ██╗  ██╗███████╗██████╗  ██████╗ ███████╗
+            ╚══██╔══╝██║  ██║██╔════╝    ██║  ██║██╔════╝██╔══██╗██╔═══██╗██╔════╝
+               ██║   ███████║█████╗      ███████║█████╗  ██████╔╝██║   ██║███████╗
+               ██║   ██╔══██║██╔══╝      ██╔══██║██╔══╝  ██╔══██╗██║   ██║╚════██║
+               ██║   ██║  ██║███████╗    ██║  ██║███████╗██║  ██║╚██████╔╝███████║
+               ╚═╝   ╚═╝  ╚═╝╚══════╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+                                                                      
+
+        ".colorize(:yellow)
         choosen_superhero=prompt.select("Choose A Superhero Please", choices )
         userSup= UserSuperhero.create(user_id: self.user.id, superhero_id: choosen_superhero)
         # binding.pry
@@ -171,7 +191,18 @@ puts"
         system 'clear'
         superhero_choosen?
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        puts "\n"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts " 
+        
+               ██████╗  ██████╗ ██╗    ██╗███████╗██████╗ ███████╗
+               ██╔══██╗██╔═══██╗██║    ██║██╔════╝██╔══██╗██╔════╝
+               ██████╔╝██║   ██║██║ █╗ ██║█████╗  ██████╔╝███████╗
+               ██╔═══╝ ██║   ██║██║███╗██║██╔══╝  ██╔══██╗╚════██║
+               ██║     ╚██████╔╝╚███╔███╔╝███████╗██║  ██║███████║
+               ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚══════╝
+                                                   
+
+        ".colorize(:yellow)
         choices=self.user.superheros.all_names
         super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
         chosen_superpower=prompt.select("Choose a Superpower to assign", Superpower.all_names)
@@ -187,8 +218,19 @@ puts"
         user.reload
         system 'clear'
         superhero_choosen?
-        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        puts "\n"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts " 
+        
+            ██████╗ ██████╗  ██████╗  █████╗ ███╗   ██╗██╗███████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗
+            ██╔═══██╗██╔══██╗██╔════╝ ██╔══██╗████╗  ██║██║╚══███╔╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+            ██║   ██║██████╔╝██║  ███╗███████║██╔██╗ ██║██║  ███╔╝ ███████║   ██║   ██║██║   ██║██╔██╗ ██║███████╗
+            ██║   ██║██╔══██╗██║   ██║██╔══██║██║╚██╗██║██║ ███╔╝  ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║╚════██║
+            ╚██████╔╝██║  ██║╚██████╔╝██║  ██║██║ ╚████║██║███████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║███████║
+            ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+                                                                                                                  
+ 
+        ".colorize(:yellow)
         choices=self.user.superheros.all_names
         super_to_add_power=prompt.select("Which Superhero Would You Like to assign a superpower to?", choices)
         choesen_org=prompt.select("Choose an Organization to be a part of: ", Organization.all_names)
@@ -201,8 +243,25 @@ puts"
 
 # This helper method will check to see if user has choosen a superhero first
     def superhero_choosen?
+
        if self.user.superheros.empty?
-         puts "You must create a Superhero first!"
+         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts"
+      
+                     ██████╗  ██████╗  ██████╗  ██████╗  ██████╗ ██████╗ ███████╗██╗
+                     ██╔═══██╗██╔═══██╗██╔═══██╗██╔═══██╗██╔═══██╗██╔══██╗██╔════╝██║
+                     ██║   ██║██║   ██║██║   ██║██║   ██║██║   ██║██████╔╝███████╗██║
+                     ██║   ██║██║   ██║██║   ██║██║   ██║██║   ██║██╔═══╝ ╚════██║╚═╝
+                     ╚██████╔╝╚██████╔╝╚██████╔╝╚██████╔╝╚██████╔╝██║     ███████║██╗
+                        ╚═════╝  ╚═════╝  ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝     ╚══════╝╚═╝
+                                                                        
+        
+              ".colorize(:red)
+         
+         puts "\n\nYou have no Superheros yet! Select option 2 in main menu!"
+ 
+      
          sleep 3
         self.main_menu()
        end
@@ -214,7 +273,11 @@ puts"
     def remove_superhero
       user.reload
       system 'clear'
-      user_input=prompt.select("Which Superhero/s Do You Want To Delete",  self.user.superheros.all_names) 
+
+      superhero_choosen?
+      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+      user_input=prompt.select("\n\nWhich Superhero/s Do You Want To Delete",  self.user.superheros.all_names) 
       result=UserSuperhero.all.find_by(user_id: self.user.id, superhero_id: user_input)
       result.delete
       # binding.pry
